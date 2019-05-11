@@ -1,18 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" class="theme-blue">
 <head>
-	<title></title>
+    <title></title>
+    {%- include head.html -%}
 </head>
 <body class="no-js">
-	<div id="skipmenu">
-		<a class="skippy sr-only-focusable" href="#content">Skip directly to site content</a>
-		<a class="skippy sr-only-focusable" href="#share-nav">Skip directly to page options</a>
-		<a class="skippy d-none d-lg-block sr-only-focusable" href="#az-large">Skip directly to A-Z link</a>
-		<a class="skippy d-none d-md-block d-lg-none sr-only-focusable" href="#az-medium">Skip directly to A-Z link</a>
-		<a class="skippy d-md-none sr-only-focusable" href="#az-small">Skip directly to A-Z link</a>
-	</div>
+    {%- include skipmenu.html -%}
 
-	<!-- (1) Global Alerts Area  -->
+    <!-- (1) Global Alerts Area  -->
+    {%- include global-alerts.html -%}
 	<!-- (2) Intranet - Links Bar -->
 	<!-- (3) Header Bar -->
 	<div class="container-fluid header-wrapper">
@@ -20,10 +16,10 @@
 			<header role="banner" aria-label="Header" class="pt-2 pb-2">
 				<div class="row">
 					<div class="col cdc-logo">
-                        <!-- Header Logo -->
+                        {%- include header-logo.html -%}
 					</div>
 					<div class="col-2 col-md-3 col-xl-4 col-xxl-3 tp-search">
-						<!-- Header Search -->
+                        {%- include header-search.html -%}
 					</div>
 				</div>
 			</header>
@@ -101,7 +97,8 @@
 				<div class="col content">
 					<!-- (15) Page Title -->
 					<!-- (16) Page Language -->
-					<!-- (17) Content Area -->
+                    <!-- (17) Content Area -->
+                    {{ content }}
 				</div>
             </div>
 
