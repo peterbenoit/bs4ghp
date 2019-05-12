@@ -7,7 +7,7 @@
 
 	{%- seo -%}
 	<link rel="shortcut icon" href="{{ "/imgs/favicon.ico"" | relative_url }}">
-	<link rel="stylesheet prefetch" href="{{ "/assets/bootstrap.css" | relative_url }}?" {{ site.time | date: '%y' }}" />
+	<link rel="stylesheet prefetch" href="{{ "/assets/bootstrap.css" | relative_url }}?{{ site.time | date: '%mm%dd%yyyy' }}" />
 	<link rel="stylesheet prefetch" href="{{ "/assets/app.min.css" | relative_url }}" />
 	<link rel="stylesheet" media="print" href="{{ "/assets/print.css" | relative_url }}"" />
 	{%- feed_meta -%}
