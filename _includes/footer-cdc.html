@@ -1,4 +1,3 @@
-{% extends sourceAbsolute.layouts + layouts.includes %}{% block main %}
 <div class="row">
     <address class="col-md-3" itemscope="itemscope" itemtype="https://schema.org/Organization">
 		<strong>CONTACT CDC-INFO</strong>
@@ -13,44 +12,43 @@
 		<div class="row mt-2">
 			<div class="col-1"><span class="fi cdc-icon-email x24"></span></div>
 			<div class="col" itemprop="contactPoint" itemscope="itemscope" itemtype="https://schema.org/ContactPoint">
-                <span itemprop="url"><a href="@tp-build-link-eng-info-request-href@">Email CDC-INFO</a></span>
+                <span itemprop="url"><a href="{{ site.app.links.footer.cdc.connect.contact }}">Email CDC-INFO</a></span>
 			</div>
 		</div>
 	</address>
     <div class="col-md-3 mt-3 mt-md-0">
 		<strong>CDC INFORMATION</strong>
 		<ul>
-			<li><a href="@tp-build-link-eng-about-href@">About CDC</a></li>
-			<li><a href="@tp-build-link-eng-jobs@">Jobs</a></li>
-			<li><a href="@tp-build-link-eng-funding-href@">Funding</a></li>
-			<li><a href="@tp-build-link-eng-policy-href@">Policies</a></li>
-			<li><a href="@tp-build-link-eng-plugins-href@">File Viewers &amp; Players</a></li>
+			<li><a href="{{ site.app.links.footer.cdc.info.about }}">About CDC</a></li>
+			<li><a href="{{ site.app.links.footer.cdc.info.jobs }}">Jobs</a></li>
+			<li><a href="{{ site.app.links.footer.cdc.info.funding }}">Funding</a></li>
+			<li><a href="{{ site.app.links.footer.cdc.info.policies }}">Policies</a></li>
+			<li><a href="{{ site.app.links.footer.cdc.info.viewers }}">File Viewers &amp; Players</a></li>
 		</ul>
 	</div>
 	<div class="col-md-3">
 		<ul>
-			<li><a href="@tp-build-link-eng-policy-href@">Privacy</a></li>
-			<li><a href="@tp-build-link-eng-foia-href@">FOIA</a></li>
-			<li><a href="@tp-build-link-eng-no-fear-href@">No Fear Act</a></li>
-			<li><a href="@tp-build-link-eng-oig@">OIG</a></li>
-			<li><a href="@tp-build-link-eng-nondescrimination-href@">Nondiscrimination</a></li>
-			<li><a href="@tp-build-link-eng-accessibility-href@">Accessibility</a></li>
+			<li><a href="{{ site.app.links.footer.cdc.info.privacy }}">Privacy</a></li>
+			<li><a href="{{ site.app.links.footer.cdc.info.FOIA }}">FOIA</a></li>
+			<li><a href="{{ site.app.links.footer.cdc.info.nofear }}">No Fear Act</a></li>
+			<li><a href="{{ site.app.links.footer.cdc.info.OIG }}">OIG</a></li>
+			<li><a href="{{ site.app.links.footer.cdc.info.nondisc }}">Nondiscrimination</a></li>
+			<li><a href="{{ site.app.links.footer.cdc.info.access }}">Accessibility</a></li>
 		</ul>
 	</div>
     <div class="col-md-3 mt-2 mt-md-0 connect-icons">
         <strong>CONNECT WITH CDC</strong><br/>
         <ul class="list-inline mt-3">
-            <li><a href="@tp-build-link-eng-facebook@" target="_blank"><span class="sr-only">Facebook</span><span class="fi cdc-icon-fb-white x24" aria-hidden="true"></span></a></li>
-            <li><a href="@tp-build-link-eng-twitter@" target="_blank"><span class="sr-only">Twitter</span><span class="fi cdc-icon-twitter-white x24" aria-hidden="true"></span></a></li>
-            <li><a href="@tp-build-link-eng-youtube@" target="_blank"><span class="sr-only">Youtube</span><span class="fi cdc-icon-youtube-white x24" aria-hidden="true"></span></a></li>
-            <li><a href="@tp-build-link-eng-instagram@" target="_blank"><span class="sr-only">Instagram</span><span class="fi cdc-icon-insta x24" aria-hidden="true"></span></a></li>
+            <li><a href="{{ site.app.links.footer.cdc.connect.facebook }}" target="_blank"><span class="sr-only">Facebook</span><span class="fi cdc-icon-fb-white x24" aria-hidden="true"></span></a></li>
+            <li><a href="{{ site.app.links.footer.cdc.connect.twitter }}" target="_blank"><span class="sr-only">Twitter</span><span class="fi cdc-icon-twitter-white x24" aria-hidden="true"></span></a></li>
+            <li><a href="{{ site.app.links.footer.cdc.connect.youtube }}" target="_blank"><span class="sr-only">Youtube</span><span class="fi cdc-icon-youtube-white x24" aria-hidden="true"></span></a></li>
+            <li><a href="{{ site.app.links.footer.cdc.connect.instagram }}" target="_blank"><span class="sr-only">Instagram</span><span class="fi cdc-icon-insta x24" aria-hidden="true"></span></a></li>
         </ul><br class="d-none d-md-block">
         <ul class="list-inline mt-2">
             <li><a href="#" class="footer-syndlink"><span class="sr-only">Syndicate</span><span class="fi cdc-icon-syndication-white x24" aria-hidden="true"></span></a></li>
-            <li><a href="@tp-build-link-eng-cdctv-href@"><span class="sr-only">CDC TV</span><span class="fi cdc-icon-cdc-tv-white x24" aria-hidden="true"></span></a></li>
-            <li><a href="@tp-build-link-eng-rss-href@"><span class="sr-only">RSS</span><span class="fi cdc-icon-rss-white x24" aria-hidden="true"></span></a></li>
-			<li><a href="@tp-build-link-eng-info-request-href@"><span class="sr-only">Email</span><span class="fi cdc-icon-email x24" aria-hidden="true"></span></a></li>
+            <li><a href="{{ site.app.links.footer.cdc.connect.cdctv }}"><span class="sr-only">CDC TV</span><span class="fi cdc-icon-cdc-tv-white x24" aria-hidden="true"></span></a></li>
+            <li><a href="{{ site.app.links.footer.cdc.connect.rss }}"><span class="sr-only">RSS</span><span class="fi cdc-icon-rss-white x24" aria-hidden="true"></span></a></li>
+			<li><a href="{{ site.app.links.footer.cdc.connect.contact }}"><span class="sr-only">Email</span><span class="fi cdc-icon-email x24" aria-hidden="true"></span></a></li>
         </ul>
     </div>
 </div>
-{% endblock %}

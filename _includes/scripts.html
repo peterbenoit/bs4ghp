@@ -1,25 +1,22 @@
 <!-- Application Requirements; Jquery, Bootstrap, AppJs  -->
-{% if data.site.isDevTarget == true %}
-{# Development Versions #}
-<script src="{{data.site.paths.web.vendor.js}}jquery.min.js?{{ dateVars.nowUtc }}"></script>
-<script src="{{data.site.paths.web.vendor.js}}bootstrap.bundle.js?{{ dateVars.nowUtc }}"></script>
-{% if data.site.isIntranetTarget == true %}
-<script src="{{data.site.paths.web.vendor.js}}typeahead/typeahead.bundle.js?{{ dateVars.nowUtc }}"></script>
-{% endif %}
-<script src="/TemplatePackage/contrib/libs/cdc/ab/4.0.0/ab.js"></script>
-<script src="{{data.site.paths.web.js}}app.bundle.js?{{ dateVars.nowUtc }}"></script>
+{% if app.site.isDevTarget == true %}
+    <script src="{{app.site.paths.web.vendor.js}}jquery.min.js?{{ site.time | date: '%m%d%Y' }}"></script>
+    <script src="{{app.site.paths.web.vendor.js}}bootstrap.bundle.js?{{ site.time | date: '%m%d%Y' }}"></script>
+    {% if app.site.isIntranetTarget == true %}
+        <script src="{{app.site.paths.web.vendor.js}}typeahead/typeahead.bundle.js?{{ site.time | date: '%m%d%Y' }}"></script>
+    {% endif %}
+    <script src="/TemplatePackage/contrib/libs/cdc/ab/4.0.0/ab.js"></script>
+    <script src="{{app.site.paths.web.js}}app.bundle.js?{{ site.time | date: '%m%d%Y' }}"></script>
 {% else %}
-{# Minified Versions #}
-<script src="{{data.site.paths.web.vendor.js}}jquery.min.js?{{ dateVars.nowUtc }}"></script>
-<script src="{{data.site.paths.web.vendor.js}}bootstrap.bundle.min.js?{{ dateVars.nowUtc }}"></script>
-{% if data.site.isIntranetTarget == true %}
-<script src="{{data.site.paths.web.vendor.js}}typeahead/typeahead.bundle.min.js?{{ dateVars.nowUtc }}"></script>
+    <script src="{{ "/assets/js/jquery.min.js" | relative_url }}?{{ site.time | date: '%m%d%Y' }}"></script>
+    <script src="{{ "/assets/js/bootstrap.bundle.min.js" | relative_url }}?{{ site.time | date: '%m%d%Y' }}"></script>
+    {% if app.site.isIntranetTarget == true %}
+        <script src="{{app.site.paths.web.vendor.js}}typeahead/typeahead.bundle.min.js?{{ site.time | date: '%m%d%Y' }}"></script>
+    {% endif %}
+    <script src="/TemplatePackage/contrib/libs/cdc/ab/4.0.0/ab.js"></script>
+    <script src="{{ "/assets/js/app.bundle.min.js" | relative_url }}?{{ site.time | date: '%m%d%Y' }}"></script>
+    {% if app.site.isIntranetTarget == false %}
+        <!-- Foresee Survey Inclusion -->
+        <script src="{{ "/assets/jscript/foresee-trigger.js" | relative_url }}?{{ site.time | date: '%m%d%Y' }}"></script>
+    {% endif %}
 {% endif %}
-<script src="/TemplatePackage/contrib/libs/cdc/ab/4.0.0/ab.js"></script>
-<script src="{{data.site.paths.web.js}}app.bundle.min.js?{{ dateVars.nowUtc }}"></script>
-{% if data.site.isIntranetTarget == false %}
-<!-- Foresee Survey Inclusion -->
-<script src="{{data.site.paths.web.jscript.foresee}}foresee-trigger.js?{{ dateVars.nowUtc }}"></script>
-{% endif %}
-{% endif %}
-<!-- @tp-wcms-metrics-scripts@ -->

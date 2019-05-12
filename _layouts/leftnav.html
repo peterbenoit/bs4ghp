@@ -132,7 +132,18 @@
 	</div>
 
 	<!-- (21, 22) Footer Area -->
-	{%- include footer.html -%}
+	<footer aria-label="Footer" role="contentinfo">
+		<div class="container-fluid footer-wrapper">
+			<div class="container">
+				{%- include footer-cdc.html -%}
+			</div>
+		</div>
+		<div class="container-fluid agency-footer">
+			<div class="container">
+				{%- include footer-agency.html -%}
+			</div>
+		</div>
+	</footer>
 
 	<!-- (23) Mobile Share Bar (Markup Only, Global Include) -->
 	<!-- Extra needed, hidden page markup (modals etc) -->

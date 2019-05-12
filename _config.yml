@@ -22,12 +22,50 @@ description: >- # this means to ignore newlines until "baseurl:"
 #twitter_username: jekyllrb
 #github_username:  jekyll
 
+app:
+  links:
+    footer:
+      agency:
+        hhs: https://www.hhs.gov/
+        usa: https://www.usa.gov/
+        disclaimer: https://www.cdc.gov/Other/disclaimer.html
+      cdc:
+        info:
+          about: https://www.cdc.gov/about/default.htm
+          jobs: https://jobs.cdc.gov/
+          funding: https://www.cdc.gov/funding
+          policies: https://www.cdc.gov/Other/policies.html
+          viewers: https://www.cdc.gov/other/plugins/index.html
+          privacy: https://www.cdc.gov/Other/policies.html
+          FOIA: https://www.cdc.gov/od/foia
+          nofear: https://www.cdc.gov/eeo/nofearact/index.htm
+          OIG: https://oig.hhs.gov/
+          nondisc: https://www.cdc.gov/other/nondiscrimination.html
+          access: https://www.cdc.gov/contact/accessibility.html
+        connect:
+          facebook: https://www.facebook.com/CDC
+          twitter: https://twitter.com/CDCgov
+          youtube: https://www.youtube.com/user/CDCstreamingHealth
+          instagram: https://www.instagram.com/CDCgov/
+          # syndicate: https://tools.cdc.gov/medialibrary/index.aspx#/sharecontent/[URL]
+          cdctv: https://www.cdc.gov/cdctv
+          rss: https://tools.cdc.gov/podcasts/rss.asp
+          contact: https://wwwn.cdc.gov/dcs/RequestForm.aspx
+  site:
+    isDevTarget: false
+
+
+
 repository: "peterbenoit/bs4ghp"
 
 # Build settings
 plugins:
-  - jekyll-feed
-  - jekyll-sitemap
+#   - jekyll-feed
+#   - jekyll-sitemap
+
+assets:
+  compress:
+    js: uglifier
 
 # A list of the pages to display in the navigation bar
 header_pages:
