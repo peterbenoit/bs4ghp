@@ -1,0 +1,152 @@
+/*!
+* Gutenberg
+*
+* MIT Fabien Sa
+* https://github.com/BafS/Gutenberg
+*/
+
+// Variables
+@import 'print/variables';
+@import '../scss/variables';
+
+// Normalize
+// @import '../node_modules/normalize-scss/sass/normalize/import-now';
+
+@import 'print/print-reset';
+@import 'print/pagination';
+@import 'print/page';
+@import 'print/reformat';
+@import 'print/utilities';
+
+
+/* print styles */
+.content {
+
+	padding: 0;
+
+	/*h1:first-child {
+		//clear: both;
+		display: block;
+		margin-bottom: 10px !important;
+		//border-top: 1px dotted black !important;
+		//border-bottom: 1px dotted black !important;
+		//padding: 8px !important;
+		color: black !important;
+		letter-spacing: 1px !important;
+		//text-align: center;
+		width: 100% !important;
+		//font-size: 30px;
+	}*/
+}
+
+.container, .container-fluid {
+	width: 100% !important;
+	min-width: 100% !important;
+	//margin: 0 !important;
+	//padding: 0 !important;
+}
+main {
+	&.col-* {
+		width: 100% !important;
+		min-width: 100% !important;
+		max-width: 100% !important;
+		flex: 0 0 100%;
+	}
+}
+
+* {
+	transform: none !important;
+	-webkit-print-color-adjust: exact;
+	color-adjust: exact !important;
+}
+
+:not(span){ //for NIOSH
+	&.float-md-right, &.float-md-left  {
+		float:none !important;
+	}
+}
+
+.card-body {
+	&.image-with-caption {
+		padding: 0;
+		text-align: center;
+		font-style:italic;
+		font-size: $fs08;
+	}
+}
+
+	table, figure, .card, .syndicate > .row {
+		//page-break-inside: avoid;
+	}
+
+	h1,h2,h3,h4,h5,h6{
+		//page-break-after:avoid;
+	}
+
+	.card-header {
+		a:after {
+			color: $white !important;
+		}
+	}
+
+	a.card, div.card{
+		&.bt-primary{
+			border: 1px solid rgba(0,0,0,.125) !important;
+		}
+	}
+
+	.slick-slider {
+		.slick-slide {
+			opacity: 1;
+		}
+
+		&[data-cdc-slider="thumbnail-slider"]{
+			.slick-slide{
+				height: auto !important;
+			}
+		}
+	}
+
+	/* stuff to hide */
+
+	.tp-nav-main,
+	.tp-search,
+	.mobile-section-nav,
+	footer,
+	.page-share-wrapper,
+	.page-format,
+	nav,
+	header .cdc-logo a:not(:first-child),
+	.cdc-logo a:after,
+	.tagline,
+	#page-validation,
+	#cdc-page-info-tab,
+	.config-panel,
+	.card-footer .btn,
+	.language-link, .jumbotron-overlay a:last-child,
+	.slick-arrow {
+		display: none;
+	}
+
+	.leftnav-wrapper {
+		display:none;
+		nav, div.card {
+			display: none;
+		}
+	}
+// body>*:not(main) {
+// 	display: none;
+// }
+// show tab content
+// .tab-content > .tab-pane {
+//     display: block!important;
+// }
+// .d-print-none
+// .d-print-inline
+// .d-print-inline-block
+// .d-print-block
+// .d-print-table
+// .d-print-table-row
+// .d-print-table-cell
+// .d-print-flex
+// .d-print-inline-flex
