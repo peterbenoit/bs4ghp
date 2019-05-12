@@ -1,0 +1,25 @@
+{
+  "name": "bs4ghp",
+  "version": "1.0.0",
+  "description": "[![Build Status](https://travis-ci.org/peterbenoit/bs4ghp.svg?branch=master)](https://travis-ci.org/peterbenoit/bs4ghp)",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peterbenoit/bs4ghp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/peterbenoit/bs4ghp/issues"
+  },
+  "homepage": "https://github.com/peterbenoit/bs4ghp#readme"
+}

@@ -63,10 +63,6 @@ plugins:
 #   - jekyll-feed
 #   - jekyll-sitemap
 
-assets:
-  compress:
-    js: uglifier
-
 # A list of the pages to display in the navigation bar
 header_pages:
 

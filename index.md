@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: leftnav
 title: Bootstrap 4 Github Pages
 ---
 
