@@ -1,0 +1,118 @@
+/* links */
+
+a {
+    color: $cdcblue;
+    text-decoration: underline;
+    &:hover {
+		text-decoration: none;
+		color: $cdcblue;
+    }
+    h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+        text-decoration: none;
+	}
+
+	.file-details {
+		font-size: 1rem!important;
+		text-decoration: none;
+		display: inline-block;
+		// color: $black;
+	}
+
+	// fix for https://websupport.cdc.gov/browse/WCMSRD-6018
+	span {
+		text-decoration: none!important;
+	}
+
+	svg, svg.icon {fill: $cdcblue;}
+
+	.x16 {
+		vertical-align: middle;
+		margin-right: 5px;
+		margin-left: 5px;
+	}
+
+	.fi.x16 {
+		vertical-align: inherit;
+	}
+
+	&.skippy {
+		position: absolute;
+		top: -1000px;
+		left: -1000px;
+		height: 1px;
+		width: 1px;
+		text-align: left;
+		overflow: hidden;
+	}
+}
+
+// FOCUS INDICATOR
+//a, [tabindex], input, radio, select, checkbox, textarea, button,
+//label, fieldset, legend, datalist, output, .focus, .form-control, .btn,
+//.btn-primary, .btn-secondary {
+//	box-shadow: 0 0 0 0.1rem rgba(255, 102, 1, 0.0);
+//	transition: box-shadow .15s ease-in-out;
+//
+//	&:focus {
+//		outline: none;
+//		box-shadow: 0 0 0 0.1rem rgba(255, 102, 1, 0.9);
+//		z-index: 1000;
+//	}
+//	&.c-white:focus {
+//		outline: none;
+//		box-shadow: 0 0 0 0.1rem rgba(255, 102, 1, 0.9);
+//		z-index: 1000;
+//	}
+//}
+
+*:focus
+ {
+	outline: auto 3px rgba(255, 102, 1, 0.9);
+	//z-index: 1000;
+}
+
+.dropdown, .dropdown-submenu, .dropdown-menu {
+	a {text-decoration: none!important;}
+	a:hover {text-decoration: underline;}
+}
+
+// text decoration
+.td-none {
+	text-decoration: none!important;
+	a {text-decoration: none!important;}
+}
+.td-none-black {
+	text-decoration: none;
+	color: $black;
+}
+
+.td-ul {
+	text-decoration: underline!important;
+	a {text-decoration: underline!important;}
+}
+.tp-label:hover {
+	text-decoration: none !important;
+}
+
+.td-lt {
+	text-decoration: line-through!important;
+	a {text-decoration: line-through!important;}
+}
+
+// no underline on hover
+.td-none-hover {
+	&:hover {text-decoration: none!important;}
+}
+
+// underline on hover
+.td-ul-hover {
+	&:hover {text-decoration: underline!important;}
+}
+
+// no underline on hover
+.td-ul-none-hover {
+	&:hover {
+		text-decoration: none!important;
+		border-bottom: none!important;
+	}
+}

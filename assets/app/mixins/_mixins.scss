@@ -1,0 +1,71 @@
+@mixin themify($themes: $themes) {
+	// $i: 0;
+	@each $theme, $map in $themes {
+		// @if ($i == 0) {
+		// 	body {
+		// 		$theme-map: () !global;
+		// 		@each $key, $submap in $map {
+		// 			$value: map-get(map-get($themes, $theme), '#{$key}');
+		// 			$theme-map: map-merge($theme-map, ($key: $value)) !global;
+		// 		}
+
+		// 		@content;
+		// 		$theme-map: null !global;
+		// 	}
+		// }
+		// @else {
+			// .theme-#{$theme}, div.theme-#{$theme} {
+			.theme-#{$theme} {
+				$theme-map: () !global;
+				@each $key, $submap in $map {
+					$value: map-get(map-get($themes, $theme), '#{$key}');
+					$theme-map: map-merge($theme-map, ($key: $value)) !global;
+				}
+
+				@content;
+				$theme-map: null !global;
+			}
+		// }
+		// $i: $i + 1;
+	}
+}
+
+@function themed($key) {
+    @return map-get($theme-map, $key);
+}
+
+@mixin mainNavLinks() {
+	//&:focus {outline:none;}
+	&:link, &:visited, &:hover, &:active {
+		text-decoration: none;
+		color:$graydarker;
+		position: relative;
+		display: block;
+		padding: 0.75rem 1.25rem;
+		margin-bottom: 0;
+		border-bottom: 1px dashed $graylight;
+		position: relative;
+
+		transition:
+			border-color .5s,
+			background-color .5s,
+			color .5s;
+	}
+	&:focus {z-index: 1070;}
+}
+
+@mixin focusBoxShadow() {
+	//box-shadow: 0 0 0 0.1rem rgba(255, 102, 1, 0.9);
+}
+
+@mixin menuDropShadow () {
+	box-shadow: 0 0 10px rgba(85, 85, 85, 0.25);
+}
+
+@mixin iconColor($color) {
+	fill: $color!important;
+
+	&:before {
+		color: $color !important;
+	}
+}

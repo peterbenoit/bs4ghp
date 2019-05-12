@@ -1,0 +1,92 @@
+/* on this page */
+
+.tp-on-this-page {
+
+    // width: 100%;
+
+    color: $black;
+    line-height: 1.3rem;
+
+    a, a:link {
+        text-decoration: none;
+
+        &:hover {
+            color: $primary;
+            text-decoration: underline;
+        }
+	}
+
+	&.float-right {
+		margin-left: 1rem;
+	}
+
+
+    // .card-header {
+    //     font-weight: 500;
+    //     font-size: 1.125rem;
+    //     background-color: #f5f5f5;
+    // }
+
+    .collapse-link, a.collapse-link {
+        font-size: 17px;
+        font-family: $opensans;
+        color: $primary;
+    }
+
+    ul.list-group {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    ul.list-group li.list-group-item {
+        border: none;
+        border-top: 1px dashed  #e0e0e0;
+        padding-left: 0px;
+        // margin-bottom: 1rem;
+        // margin-top: .2rem;
+    }
+
+    // .list-group {
+    //     font-weight: 400;
+    // }
+
+
+
+
+    ul.list-group li.list-group-item:last-child {
+        &:hover {
+            border-bottom: none;
+        }
+        border-bottom: none;
+    }
+
+	//https://websupport.cdc.gov/browse/WCMSRD-5930
+    // ul.list-group li.list-group-item:nth-child(6) {
+    //     &:hover {
+    //         border-top: none;
+    //     }
+    //     border-top: none;
+    // }
+}
+
+.tp-on-this-page-large {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .tp-on-this-page {
+       width: 100% !important;
+    }
+}
+
+//Fixes WCMSRD-6569 - border doesn't appear on mobile viewports between list-group columns.
+@media (min-width:768px){
+    .tp-on-this-page{
+        ul.list-group li.list-group-item:first-child {
+            &:hover {
+                border-top: none;
+            }
+            border-top: none;
+        }
+    }
+}

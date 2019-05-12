@@ -1,0 +1,144 @@
+nav#mobilenav {
+	position: relative;
+	z-index: 980;
+	box-shadow: 0 0 8px 0 rgba(0,0,0,0.23);
+}
+.mobile-section-nav {
+	background-color:$graylightest;
+
+	nav {
+		.dropdown-toggle {
+			border-bottom: 2px solid $graylighter;
+			padding-left: 1rem;
+			text-align:left;
+			width:100%;
+			font-size: 23px;
+
+			#svg-down {
+				width:40px;
+				height:40px;
+				position:absolute;
+				border-radius: 20px;
+				right: 30px;
+				bottom:-12px;
+				z-index:1002;
+				transition: transform .4s ease;
+				margin-bottom:-8px;
+				border:2px solid $white;
+				fill:$white;
+
+				&.fi {
+					color: $white;
+
+					&:before {
+						display: block;
+						height: 40px;
+						font-size: 36px;
+						text-align: center;
+					}
+				}
+			}
+		}
+		.dropdown-toggle::after {display:none;}
+		.dropdown {
+			z-index:1070;
+			.btn {
+				padding-top:3px;
+				padding-bottom:3px;
+				background-color:$graylightest;
+				white-space: normal;
+				&:hover {text-decoration: none;}
+			}
+			.dropdown-menu {
+				top:43px !important;
+				transform: none !important;
+				padding-bottom:0;
+				z-index:999 !important;
+			}
+			.dropdown-menu .list-group {
+				max-height: 400px;
+				overflow-y:auto;
+			}
+
+			.list-group > ul {padding-left:20px;}
+			ul {
+				ul {display:none;}
+				a.nav-plus:link, a.nav-minus:link {display:none;}
+			}
+		}
+	}
+}
+// left outside to reuse in bottom nav
+a.mobile-section-nav-foot, .nav-section-home {
+	color:$white;
+	border-bottom: none;
+	border-left:0;
+	text-decoration: none;
+	&.list-group-item:last-child {
+		border-bottom-right-radius: 0;
+		border-bottom-left-radius: 0;
+	}
+
+	svg {
+		display:inline-block;
+		width:24px;
+		height:24px;
+		margin-right:4px;
+		margin-bottom:2px;
+		fill:$white;
+		vertical-align: middle;
+	}
+
+	.fi {
+		margin-right: 4px;
+		margin-bottom: 2px;
+		vertical-align: middle;
+	}
+}
+.nav-section-home {
+	padding:10px 8px;
+	font-family: $opensans;
+	font-size:13pt;
+	font-weight:normal;
+	border-bottom: 1px dashed $graylight;
+	border-top-width: 0;
+	border-top-style: solid;
+	border-left: 4px solid $white;
+
+	transition: background-color .4s ease;
+	transition: border-left-color .4s ease;
+
+	.fi, svg {
+		float: left;
+	}
+
+	a {
+		color:$graydark;
+		transition: color .4s ease;
+		overflow: hidden;
+		display: block;
+	}
+
+	&.selected {font-weight: bold;}
+}
+
+
+@media (max-width: 991px) {
+	.container {max-width: none;}
+	.content {
+		padding-top:20px;
+		padding-left:15px;
+		h1:first-child {display:none;}
+	}
+    .content-fullwidth {
+      padding-left: 15px;
+    }
+	.body-wrapper {h1:first-child {display:none;}}
+	.mobile-title {
+		width: 84%;
+		display: inline-block;
+	}
+	.nav-section-home {border-top-width: 2px;}
+	.nav-section-home.selected {border-left-width: 0 !important;}
+	body .site-title {border-bottom:none !important;}
+}

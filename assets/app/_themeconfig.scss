@@ -1,0 +1,527 @@
+// This are controls all attributes that are Theme-able
+// -- this function loops over the themes, and prepends '.theme-[color] '
+@include themify($themes) {
+
+	// site title
+	.site-title {
+		background-color: themed('primary');
+		color: themed('primaryTxt');
+		border-bottom: 3px solid themed('secondary');
+
+		.tagline {color: themed('primaryTxt');}
+	}
+
+	// colors
+	.bg-primary, &.bg-primary, .alert-primary {
+		background-color: themed('primary')!important;
+		color: themed('primaryTxt')!important;
+
+		// // https://websupport.cdc.gov/browse/WCMSRD-5557
+		// // https://websupport.cdc.gov/browse/WCMSRD-5943
+		// &:hover,
+		// &:focus {
+		// 	background-color: darken(themed('primary'), 10%)!important;
+		// }
+		a:not( .btn ) {
+			color: themed('primaryTxt');
+			.file-details {
+				color: themed('primaryTxt');
+			}
+		}
+		svg { fill: themed('primaryTxt'); }
+		.card-header {
+			a {
+				color: themed('primaryTxt');
+			}
+		}
+	}
+	.bg-secondary, &.bg-secondary, .alert-secondary {
+		background-color: themed('secondary')!important;
+		color: $black!important;
+
+		a:not( .btn ) {
+			color: $black;
+		}
+		svg {
+			fill: $black;
+		}
+	}
+	.bg-tertiary, &.bg-tertiary {
+		background-color: themed('tertiary')!important;
+		color: $black;
+
+		&.card-header a {
+			color: $black;
+		}
+	}
+	.bg-quaternary, &.bg-quaternary {
+		background-color: themed('quaternary')!important;
+		color: $black;
+
+		&.card-header a {
+			color: $black;
+		}
+	}
+	.b-primary, &.b-primary { border-color: themed('primary')!important; }
+	.b-secondary, &.b-secondary { border-color: themed('secondary')!important; }
+	.b-tertiary, &.b-tertiary { border-color: themed('tertiary')!important; }
+	.b-quaternary, &.b-quaternary { border-color: themed('quaternary')!important; }
+	.bt-primary, &.bt-primary { border-top-color: themed('primary')!important; }
+	.bt-secondary, &.bt-secondary { border-top-color: themed('secondary')!important; }
+	.bt-tertiary, &.bt-tertiary { border-top-color: themed('tertiary')!important; }
+	.bt-quaternary, &.bt-quaternary { border-top-color: themed('quaternary')!important; }
+	.br-primary, &.br-primary { border-right-color: themed('primary')!important; }
+	.br-secondary, &.br-secondary { border-right-color: themed('secondary')!important; }
+	.br-tertiary, &.br-tertiary { border-right-color: themed('tertiary')!important; }
+	.br-quaternary, &.br-quaternary { border-right-color: themed('quaternary')!important; }
+	.bb-primary, &.bb-primary { border-bottom-color: themed('primary')!important; }
+	.bb-secondary, &.bb-secondary { border-bottom-color: themed('secondary')!important; }
+	.bb-tertiary, &.bb-tertiary { border-bottom-color: themed('tertiary')!important; }
+	.bb-quaternary, &.bb-quaternary { border-bottom-color: themed('quaternary')!important; }
+	.bl-primary, &.bl-primary { border-left-color: themed('primary')!important; }
+	.bl-secondary, &.bl-secondary { border-left-color: themed('secondary')!important; }
+	.bl-tertiary, &.bl-tertiary { border-left-color: themed('tertiary')!important; }
+	.bl-quaternary, &.bl-quaternary { border-left-color: themed('quaternary')!important; }
+	.c-primary, .text-primary, &.c-primary, &.text-primary { color: themed('primary')!important; }
+
+	.primary li:before,
+	.primary li.checked:before { color: themed('primary') !important; }
+
+
+	.alert-primary {
+		svg {
+			fill: themed('secondary');
+		}
+	}
+
+	.cdc-timeline {
+		svg {
+			fill: themed('primary');
+		}
+	}
+
+	.tabs-horizontal.nav-tabs .nav-link.active {
+		border-bottom: 3px solid themed('primary');
+	}
+
+	//horzontal nav menu item box
+	.yamm .dropdown-item:hover {
+		border-left: 4px solid themed('primary');
+	}
+	.yamm .nav-item.dropdown.show a.nav-link, .yamm .nav-link:hover {
+		background: themed('secondary');
+	}
+	.tabs-vertical .nav-link.active {
+		border-bottom: 3px solid themed('primary');
+	}
+
+	.nav-tabs {
+		.nav-link {
+			&.active,
+			&:hover {
+				border-top: 3px solid themed('primary');
+				font-weight: bold;
+			}
+		}
+	}
+
+	.nav-pills {
+		.nav-link {
+			&.active {
+				border-bottom: 3px solid themed('secondary');
+			}
+		}
+	}
+
+	//Date Picker
+	.gj-datepicker-bootstrap [role=right-icon] button .gj-icon,
+	.gj-datepicker-bootstrap [role=right-icon] button .material-icons{
+		color: themed(primary);
+	}
+	.gj-datepicker-bootstrap button{
+		background-color: #ffffff;
+		border-color: #bdbdbd !important;
+		margin-left:1px;
+	}
+
+	.gj-picker-bootstrap table tr td.selected.gj-cursor-pointer div{
+		background-color: themed('primary') !important;
+		border-color: themed('primary') !important;
+	}
+
+	// tables
+	.table {
+		&.table-dark { background-color: themed('primary'); }
+		.thead-light th { background-color: themed('secondary'); }
+		.thead-dark {
+			th {
+				background-color: themed('primary');
+				border-color: themed('primary');
+				color: themed('primaryTxt');
+			}
+		}
+		//https://websupport.cdc.gov/browse/WCMSRD-5800
+		// &.table-striped {
+		// 	thead {
+		// 		th, tr {
+		// 			background-color: $white;
+		// 			color: $black;
+		// 			border-top: none;
+		// 		}
+		// 	}
+		// }
+		&.table-striped-dark {
+			tbody {
+				tr:nth-of-type(odd) {
+					background-color: themed('primary');
+					color: themed('primaryTxt');
+				}
+			}
+		}
+		&.table-striped-light {
+			tbody {
+				tr:nth-of-type(odd) {
+					background-color: themed('secondary');
+					color: $black;
+				}
+			}
+		}
+		&.table-hover-dark {
+			tbody {
+				tr:hover {
+					background-color: themed('primary');
+					color: themed('primaryTxt');
+				}
+			}
+		}
+		&.table-hover-light {
+			tbody {
+				tr:hover {
+					background-color: themed('secondary');
+					color: $black;
+				}
+			}
+		}
+	}
+
+	.audio-player {
+		.btn-primary, .btn-secondary {
+			background-color: $graylighter;
+			border-color: $graylighter;
+			&:hover, &:focus, &:active,
+			&:not(:disabled):not(.disabled):active {
+				background-color:darken($graylighter, 10%);
+				border-color: darken($graylighter, 10%);
+			}
+
+			.volume-range-button input {
+				margin-bottom: 10px !important;
+			}
+
+			svg {fill:$graydarker;}
+
+			.fi {
+				color: $graydarker;
+				vertical-align: middle;
+			}
+		}
+	}
+
+	a {
+		.btn-primary, &.btn-primary {
+			&:hover { background-color: themed('primary')!important; }
+		}
+		.btn-secondary, &.btn-secondary {
+			&:hover { background-color: themed('secondary')!important; }
+		}
+		.btn-tertiary, &.btn-tertiary {
+			&:hover { background-color: themed('tertiary')!important; }
+		}
+		.btn-quaternary, &.btn-quaternary {
+			&:hover { background-color: themed('quaternary')!important; }
+		}
+	}
+
+	//buttons
+	a.bg-primary.nav-btn {
+		&:focus,
+		&:hover {
+			background-color: themed('primary') !important;
+		}
+	}
+
+	a.bg-secondary.nav-btn {
+		&:focus,
+		&:hover {
+			background-color: themed('secondary') !important;
+		}
+	}
+
+	.btn-primary, &.btn-primary {
+		background-color: themed('primary');
+		border-color: themed('primary');
+		color: themed('primaryTxt');
+		.file-details {
+			color: themed('primaryTxt');
+		}
+		svg {
+			fill: themed('primaryTxt');
+		}
+		&:hover { background-color: darken(themed('primary'), 5%); }
+		&:focus,
+		&:not(:disabled):not(.disabled):active,
+		&:not(:disabled):not(.disabled).active {
+			background-color: themed('primary');
+			border-color: themed('primary');
+		}
+	}
+	.show {
+		.btn-primary {
+			&.dropdown-toggle {
+				background-color: themed('primary'); border-color: themed('primary');
+			}
+		}
+	}
+
+	.btn-secondary, &.btn-secondary {
+		background-color: themed('secondary');
+		border-color: themed('secondary');
+		color: $black;
+		.file-details {
+			color: $black;
+		}
+		svg {
+			fill: $black;
+		}
+		&:hover { background-color: darken(themed('secondary'), 5%); border-color: darken(themed('secondary'), 5%); color: $black; }
+		&:focus,
+		&:not(:disabled):not(.disabled):active,
+		&:not(:disabled):not(.disabled).active {
+			background-color: themed('secondary');
+			border-color: themed('secondary');
+			color: $black;
+		}
+	}
+	.btn-tertiary, &.btn-tertiary {
+		background-color: themed('tertiary');
+		border-color: themed('tertiary');
+		color: $cdcblue;
+		.file-details {
+			color: $black;
+		}
+		svg {
+			fill: $primary;
+		}
+		&:hover { background-color: darken(themed('tertiary'), 5%); border-color: darken(themed('tertiary'), 5%); }
+		&:focus,
+		&:not(:disabled):not(.disabled):active,
+		&:not(:disabled):not(.disabled).active {
+			background-color: themed('tertiary'); border-color: themed('tertiary');
+		}
+	}
+	.btn-quaternary, &.btn-quaternary {
+		background-color: themed('quaternary');
+		border-color: themed('quaternary');
+		color: $black;
+		.file-details {
+			color: $black;
+		}
+		svg {
+			fill: $primary;
+		}
+		&:hover { background-color: darken(themed('quaternary'), 5%); border-color: darken(themed('quaternary'), 5%); }
+		&:focus,
+		&:not(:disabled):not(.disabled):active,
+		&:not(:disabled):not(.disabled).active {
+			background-color: themed('quaternary'); border-color: themed('quaternary');
+		}
+	}
+
+	// list group
+	.list-group-item {
+		&.active { background-color: themed('primary'); border-color: themed('primary'); }
+
+		&.list-group-item-primary {
+			background-color: themed('primary');
+			color: themed('primaryTxt');
+		}
+		&.list-group-item-secondary {
+			background-color: themed('secondary');
+			color: $black;
+		}
+	}
+
+	.radioBtn-styled {
+		.form-check input:checked ~ .checkmark {background-color: themed('primary');}
+		.form-check .checkmark:after {background-color: themed('primary');}
+	}
+
+	.checkbox-list {
+		&.primary .fi {
+			color: themed('primary');
+		}
+	}
+
+	//accordion
+	.accordion {
+		.card-header {
+			border-left-color: themed('primary');
+			color: themed('primary');
+			&:hover {
+				border-left-color: themed('primary') !important;
+				color: themed('primary') !important;
+			}
+
+		}
+	}
+
+	// Icons
+	.dropdown-menu-search svg.fill-p, .dropdown-menu-search svg .fill-p { fill: $primary; }
+	svg.fill-p, svg .fill-p, .fill-p { fill: themed('primary'); &:before { color: themed('primary') } }
+	svg.fill-s, svg .fill-s, .fill-s { fill: themed('secondary'); &:before { color: themed('secondary') } }
+	svg.fill-t, svg .fill-t, .fill-t { fill: themed('tertiary'); &:before { color: themed('tertiary') } }
+	svg.fill-q, svg .fill-q, .fill-q { fill: themed('quaternary'); &:before { color: themed('quaternary') } }
+
+	// nav pills
+	.nav-pills .nav-link.active,
+	.nav-pills .show > .nav-link { background-color: themed('primary'); color: themed('primaryTxt'); }
+
+	// Nav
+	nav ul.tp-nav-main li a:hover,
+	nav ul.tp-nav-main li a:active,
+	.mobile-section-nav li a:hover,
+	.mobile-section-nav li a:active {
+		border-left: 4px solid themed('primary');
+		background-color: $graylightest;
+		color:themed('primary');
+	}
+
+	.mobile-section-nav {
+		border-top:3px solid themed('secondary');
+		#svg-down {background-color:themed('primary');}
+		nav .dropdown .list-group a.selected {
+			border-left: 4px solid themed('primary');
+		}
+	}
+
+	nav {
+		.nav-section-home {
+			border-top-color:themed('primary');
+			svg {fill:themed('primary');}
+			.fi {color:themed('primary');}
+
+			&.selected {
+				border-left: 4px solid themed('primary');
+				background-color: $graylightest;
+			}
+			&:hover {
+				background-color: $graylightest;
+				border-left: 4px solid themed('primary');
+				& a {color:themed('primary');}
+			}
+			a {
+				text-decoration: none;
+			}
+		}
+		// LEVEL 1
+		ul.tp-nav-main, .mobile-section-nav {
+			li {
+				a.nav-plus, a.nav-minus,
+				a.nav-plus:hover, a.nav-minus:hover {
+					background-color: transparent;
+					border-width:0;
+				}
+				&.active {
+					background-color: $white;
+
+					> a:first-child {
+						border-left-color: themed('primary');
+					}
+					a:hover {
+						border-left-color: themed('primary');
+						background-color: $graylightest;
+					}
+					a.nav-plus:link, a.nav-minus:link,
+					a.nav-plus:hover, a.nav-minus:hover {
+						background-color: transparent;
+						border-width:0;
+					}
+
+					// LEVEL 2
+					ul li {
+						border-left-color: themed('secondary');
+
+						a:link, a:active, a:visited {
+							font-weight: normal;
+							border-left: 4px solid $graylightest;
+							border-left: 4px solid themed('secondary');
+						}
+						a:hover {
+							//border-left-color: themed('primary');
+							background-color: $graylightest;
+							color:themed('primary');
+						}
+						&.selected {
+							> a:first-child {
+								font-weight: bold;
+								//border-left-color: themed('primary');
+								background-color: $graylightest;
+							}
+							a[data-toggle='collapse']:hover {border-left-color: $graylightest;}
+						}
+						&.active {
+							border-left-color: themed('secondary');
+							> a:first-child {
+								font-weight: bold;
+							}
+						}
+
+						// LEVEL 3
+						ul li {
+							> a:first-child {
+								border-left-color: lighten(themed('tertiary'), 5%);
+							}
+						}
+					}
+				}
+				&.selected {
+					> a:first-child {
+						font-weight: bold;
+						//border-left-color: $white;
+						background-color: $graylightest;
+						color:themed('primary');
+					}
+				}
+				&.selected.active {
+					> a:first-child {
+						font-weight: bold;
+						//border-left-color: themed('primary');
+					}
+
+					> a {
+						background-color: $graylightest;
+					}
+				}
+			}
+		}
+		.mobile-section-nav {
+			a.mobile-section-nav-foot {
+				background-color: themed('primary');
+				&:hover {background-color: darken(themed('primary'), 5%);}
+			}
+			li {
+				&.selected {
+					> a:first-child {
+						border-left-color: themed('primary');
+					}
+				}
+			}
+		}
+	}
+
+	//Pagination
+	& .pagination li.active a {
+		background-color: themed('primary') !important;
+		border-color: themed('primary') !important;
+	}
+}

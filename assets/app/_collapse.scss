@@ -1,0 +1,76 @@
+/* collapse */
+
+.accordion{
+    .card-header{
+        padding-right: 50px;
+        border-left: 4px solid;
+        border-left-color: $primary;
+        color: $primary;
+        transition: border-left-color .5s;
+        transition-timing-function: ease;
+
+        &.collapsed {
+            border-left-color: transparent;
+            color: inherit;
+
+            &:hover {
+                padding-right: 50px;
+                border-left: 4px solid;
+                border-left-color: $primary;
+                color: $primary;
+            }
+        }
+
+        .btn, .btn-link{
+            &.btn-link {
+                text-decoration: none;
+                transition:  color .5s;
+            }
+        }
+    }
+}
+.card-header .btn-link {
+    font-weight: inherit;
+    color: inherit;
+}
+
+.card-header .btn.btn-link {
+    padding: 0;
+}
+
+.card-header .btn-link:hover {
+    cursor: pointer;
+}
+
+.tab-pane {
+    padding: 15px 10px;
+}
+
+.collapse-link, a.collapse-link {
+    font-size: 17px;
+    font-family: $opensans;
+    color: $primary;
+}
+
+.collapse .card-body  {
+    .card {
+        border-radius: .25rem;
+		border: 1px solid $graylight;
+
+		.card-body {
+			padding-left: 1rem;
+        }
+
+        .card-header {
+            &:after {
+                background: none;
+            }
+
+            &:hover {
+                background: none;
+            }
+        }
+
+    }
+
+}

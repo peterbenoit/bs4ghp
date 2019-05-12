@@ -1,0 +1,20 @@
+/* list group */
+
+.list-group-item {
+	&.list-group-item-success {
+		background-color: $green-primary!important;
+		color: $white;
+	}
+	&.list-group-item-info {
+		background-color: $tertiary!important;
+		color: $black;
+	}
+	&.list-group-item-warning {
+		background-color: $amber-primary!important;
+		color: $white;
+	}
+	&.list-group-item-danger {
+		background-color: $pink-primary!important;
+		color: $white;
+	}
+}

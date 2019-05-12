@@ -1,0 +1,21 @@
+/* badges */
+
+.badge {
+	&.badge-primary {
+		background-color: $primary!important;
+	}
+	&.badge-success {
+		background-color: $green-primary!important;
+	}
+	&.badge-info {
+		background-color: $tertiary!important;
+		color: $black;
+	}
+	&.badge-warning {
+		background-color: $amber-primary!important;
+		color: $white;
+	}
+	&.badge-danger {
+		background-color: $pink-primary!important;
+	}
+}

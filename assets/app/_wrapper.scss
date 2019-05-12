@@ -1,0 +1,54 @@
+body, html {
+    background-color: $graylightest;
+}
+
+// Nav updates - adding padding at Cari's request -
+// Remove if problematic
+// NAV COLOR CHANGES
+//.content { padding-left:35px; }
+//.content-fullwidth { padding-left: 15px;}
+
+
+.body-wrapper, .header-wrapper {
+    background-color:$white;
+}
+
+.header-wrapper {
+    header {
+        .logo-large {
+		   margin-top: 1rem;
+		   margin-bottom: 1rem;
+		   fill: $black;
+		}
+		.logo-small {
+			fill: $black;
+		}
+		.logo-atsdr {
+			max-height: 60px;
+		}
+    }
+}
+
+.body-wrapper {
+	padding-left:0;
+	padding-right:0;
+	padding-top: 1rem;
+}
+
+#skippy {
+    display: block;
+    padding: 1em;
+    color: $white;
+    background-color: $primary!important;
+	outline: 0;
+	.skiplink-text {
+		padding: .5em;
+		outline: 1px dotted;
+	}
+}
+
+
+@media (min-width: $lg) {
+	.content { padding-left:35px; }
+	.content-fullwidth { padding-left: 15px;}
+}

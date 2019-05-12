@@ -1,0 +1,103 @@
+
+/* typography */
+html {
+	font-size: 17px;
+}
+
+body {
+	font-family: $opensans;
+	color: $black;
+    font-size: 17px;
+    border-top: 5px solid $gray;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    font-family: 'Merriweather', serif;
+    line-height: 1.3;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    // dont add a space after headings italics
+    i:after, em:after, .italic:after, .text-italic:after {
+        content: "";
+    }
+    a {
+        text-decoration: none;
+    }
+}
+
+.display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+	font-family: $opensans;
+}
+
+blockquote {
+    font-size: 1.25rem;
+
+    &.with-quote {
+        p:before, p:after {
+            content: '\201C';
+        }
+    }
+}
+
+.merri {
+    font-family: "Merriweather", serif;
+}
+.open {
+    font-family: $opensans;
+}
+
+// add a space after italics
+.italicize {
+    i:after, em:after, .italic:after, .text-italic:after {
+        content: "\00a0";
+    }
+}
+
+h1, .h1 {
+    font-size: 2.125rem;
+}
+h2, .h2 {
+    font-size: 1.875rem;
+}
+h3, .h3 {
+    font-size: 1.625rem;
+}
+h4, .h4 {
+    font-size: 1.375rem;
+}
+h5, .h5 {
+    font-size: 1.125rem;
+}
+h6, .h6 {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+small, .small {
+    font-size: .8rem;
+    line-height: 1.15;
+}
+
+sub, sup, .superscript, .extrasmall {
+    font-size: .7rem;
+    line-height: 1.15;
+    text-decoration: none;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+//for RTL Language formatting being overwriitern(WCMSRD-6533) - temp fix till bootstrap 4 fixes the problem
+[dir=RTL] {
+text-align: right;
+}

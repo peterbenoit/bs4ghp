@@ -1,0 +1,35 @@
+/* nav buttons */
+
+a {
+	&.nav-btn {
+		text-decoration: none;
+
+		.bg-primary {
+			color: $white;
+		}
+		.bg-secondary,
+		.bg-gray,
+		.bg-gray-l1,
+		.bg-gray-l2,
+		.bg-gray-l3,
+		.bg-white {
+			color: $black;
+		}
+
+		// p {
+		// 	color: $black;
+		// }
+
+		.bg-primary {
+			p {
+				color: $white;
+			}
+		}
+
+		&.nav-btn-horizontal {
+			.col p:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,90 @@
+$themes: (
+	blue: (
+		color: blue,
+        primary: $primary,
+        primaryTxt: $white,
+        secondary: $secondary,
+        tertiary: $tertiary,
+		quaternary: $quaternary
+    ),
+	purple: (
+		color: purple,
+        primary: $purple-primary,
+        primaryTxt: $white,
+        secondary: $purple-secondary,
+        tertiary: $purple-tertiary,
+		quaternary: $purple-quaternary
+    ),
+    brown: (
+		color: brown,
+        primary: $brown-primary,
+        primaryTxt: $white,
+        secondary: $brown-secondary,
+        tertiary: $brown-tertiary,
+		quaternary: $brown-quaternary
+	),
+    teal: (
+		color: teal,
+        primary: $teal-primary,
+        primaryTxt: $white,
+        secondary: $teal-secondary,
+        tertiary: $teal-tertiary,
+		quaternary: $teal-quaternary
+	),
+    pink: (
+		color: pink,
+        primary: $pink-primary,
+        primaryTxt: $white,
+        secondary: $pink-secondary,
+        tertiary: $pink-tertiary,
+		quaternary: $pink-quaternary
+	),
+    orange: (
+		color: orange,
+        primary: $orange-primary,
+        primaryTxt: $white,
+        secondary: $orange-secondary,
+        tertiary: $orange-tertiary,
+		quaternary: $orange-quaternary
+	),
+    slate: (
+		color: slate,
+        primary: $slate-primary,
+        primaryTxt: $white,
+        secondary: $slate-secondary,
+        tertiary: $slate-tertiary,
+		quaternary: $slate-quaternary
+	),
+    indigo: (
+		color: indigo,
+        primary: $indigo-primary,
+        primaryTxt: $white,
+        secondary: $indigo-secondary,
+        tertiary: $indigo-tertiary,
+		quaternary: $indigo-quaternary
+	),
+    cyan: (
+		color: cyan,
+        primary: $cyan-primary,
+        primaryTxt: $white,
+        secondary: $cyan-secondary,
+        tertiary: $cyan-tertiary,
+		quaternary: $cyan-quaternary
+	),
+    green: (
+		color: green,
+        primary: $green-primary,
+        primaryTxt: $white,
+        secondary: $green-secondary,
+        tertiary: $green-tertiary,
+		quaternary: $green-quaternary
+	),
+    amber: (
+		color: amber,
+        primary: $amber-primary,
+        primaryTxt: $black,
+        secondary: $amber-secondary,
+        tertiary: $amber-tertiary,
+		quaternary: $amber-quaternary
+	)
+);

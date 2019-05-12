@@ -1,0 +1,61 @@
+/* tables */
+
+
+.d-table-cell { display: table-cell; }
+.inline-table { display: inline-table; }
+.fixed-table { table-layout: fixed; }
+
+@media (max-width: 768px) {
+
+	.opt-in {
+		tbody > tr {
+			display: none;
+			&.expanded {
+				display: table-row;
+			}
+		}
+		&.expanded {
+			tbody > tr {
+				display: table-row;
+			}
+			+ div > .expander {
+				display: none;
+			}
+			.faded {
+				opacity: 1;
+			}
+		}
+
+		.expander {
+			text-align: center;
+		}
+
+		.faded {
+			opacity: .5;
+		}
+	}
+}
+
+table {
+	&.table {
+		.thead-light {
+			th {
+				color: $black;
+			}
+		}
+	}
+
+	caption {
+		//https://sd5etr.axshare.com/#g=1&p=tables
+        color: $graydark;
+		&.caption-top {
+			caption-side: top;
+		}
+		&.caption-bottom {
+			caption-side: bottom;
+			font-size: 0.8rem;
+			font-style: italic;
+			color: #555555;
+		}
+	}
+}

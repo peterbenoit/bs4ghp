@@ -1,0 +1,32 @@
+.step-table {
+    .row {
+        [class*="col-"] { //Could be .col-md-6 if we know this is only two columns, otherwise have to apply class to row
+            border-bottom: 1px solid;
+            border-bottom-color: $graylight !important;
+        }
+
+        &:nth-child(even){
+            background-color: $graylightest;
+        }
+
+        &:last-child {
+            [class*="col-"]{ //Could be .col-md-6 if we know this is only two columns, otherwise have to apply class to row
+                border-bottom:none;
+            }
+        }
+    }
+
+    .h-full {
+        height:100%;
+    }
+}
+
+@media (max-width:767.98px){
+    .step-table {
+        .row{
+            [class*="col-"] { //Could be .col-md-6 if we know this is only two columns, otherwise have to apply class to row
+                border-bottom: none;
+            }
+        }
+    }
+}

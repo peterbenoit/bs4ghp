@@ -1,0 +1,34 @@
+/* tables */
+
+// taken from TP3, values modified
+table {
+	&.table {
+		td, th {
+			&.text-left {
+				text-align: left;
+			}
+			&.text-center {
+				text-align: center;
+			}
+			&.text-right {
+				text-align: right;
+			}
+
+			&.indent-1 {
+				padding-left: 1rem;
+			}
+			&.indent-2 {
+				padding-left: 1.4rem;
+			}
+			&.indent-3 {
+				padding-left: 1.8rem;
+			}
+			&.indent-4 {
+				padding-left: 2.4rem;
+			}
+			&.indent-5 {
+				padding-left: 2.8rem;
+			}
+		}
+	}
+}

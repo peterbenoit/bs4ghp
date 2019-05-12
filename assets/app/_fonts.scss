@@ -1,0 +1,43 @@
+/* merriweather-regular - latin */
+
+@font-face {
+	font-family: 'Merriweather';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../fonts/merriweather-v19-latin-regular.eot');
+	/* IE9 Compat Modes */
+	src: local('Merriweather Regular'), local('Merriweather-Regular'), url('../fonts/merriweather-v19-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('../fonts/merriweather-v19-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+	url('../fonts/merriweather-v19-latin-regular.woff') format('woff'), /* Modern Browsers */
+	url('../fonts/merriweather-v19-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+	url('../fonts/merriweather-v19-latin-regular.svg#Merriweather') format('svg');
+	/* Legacy iOS */
+}
+
+/* open-sans-regular - latin */
+
+@font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../fonts/open-sans-v15-latin-regular.eot');
+	/* IE9 Compat Modes */
+	src: local('Open Sans Regular'), local('OpenSans-Regular'), url('../fonts/open-sans-v15-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('../fonts/open-sans-v15-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+	url('../fonts/open-sans-v15-latin-regular.woff') format('woff'), /* Modern Browsers */
+	url('../fonts/open-sans-v15-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+	url('../fonts/open-sans-v15-latin-regular.svg#OpenSans') format('svg');
+	/* Legacy iOS */
+}
+
+@font-face {
+	font-family:"cdciconfont";
+	src:url("../fonts/cdciconfont.eot?a8c42e390c3890ce046a9fb4a0128a60");
+	src:url("../fonts/cdciconfont.eot?a8c42e390c3890ce046a9fb4a0128a60#iefix") format("embedded-opentype"),
+	url("../fonts/cdciconfont.woff2?a8c42e390c3890ce046a9fb4a0128a60") format("woff2"),
+	url("../fonts/cdciconfont.woff?a8c42e390c3890ce046a9fb4a0128a60") format("woff"),
+	url("../fonts/cdciconfont.ttf?a8c42e390c3890ce046a9fb4a0128a60") format("truetype"),
+	url("../fonts/cdciconfont.svg?a8c42e390c3890ce046a9fb4a0128a60#icons") format("svg");
+	font-weight:normal;
+	font-style:normal;
+}

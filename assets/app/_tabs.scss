@@ -1,0 +1,78 @@
+/* tabs */
+
+.tabs-horizontal.nav-tabs .nav-item.show .nav-link,
+.tabs-horizontal.nav-tabs .nav-link.active {
+	border-color: transparent;
+}
+
+.tabs-horizontal.nav-tabs .nav-link:focus,
+.tabs-horizontal.nav-tabs .nav-link:hover {
+	border-color: transparent;
+}
+
+.tabs-horizontal.nav-tabs {
+	border-bottom: none;
+}
+
+.tabs-horizontal.nav-tabs .nav-link {
+	border: none;
+}
+
+.nav-tabs {
+	.nav-link {
+		border-top: 1px solid transparent;
+		border-radius: 0;
+	}
+}
+
+.nav-pills {
+	background-color: $graylightest;
+	.nav-item {
+		margin-bottom: 0;
+	}
+	.nav-link {
+		border-radius: 0;
+	}
+}
+
+
+.tabs-horizontal.nav-tabs {
+	border-bottom: 3px solid $graylighter;
+
+	.nav-item {
+		margin-bottom: -3px;
+	}
+	.nav-link {
+		border-top: 0;
+		&.active {
+			border-top: none!important;
+		}
+	}
+}
+
+.nav-link {
+	text-decoration: none;
+	color: $black;
+	font-weight: normal;
+
+	&:hover {
+		color: $black;
+		font-weight: normal;
+	}
+}
+
+.tabs-module {
+	.nav-link {
+		&:hover {
+			font-weight: normal !important;
+			cursor: pointer;
+			position: relative;
+		}
+	}
+	.nav-link.active {
+		color: $black !important;
+		&:hover {
+			font-weight: bold !important;
+		}
+	}
+}

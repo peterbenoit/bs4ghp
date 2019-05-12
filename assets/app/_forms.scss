@@ -1,0 +1,444 @@
+/* forms */
+
+//added 9/12/18 by Jim O'Brien for fixes on homepage search in IE
+::-ms-clear {
+  display: none;
+}
+
+form {
+	// recaptcha form
+	&.validate {
+
+		.form-group {
+			fieldset {
+				&.fieldset.border {
+					padding: 10px;
+					border: 1px solid $graydark;
+					border-radius: 8px;
+					box-shadow: 0 0 1px $graydark;
+					margin: 12px 0px 18px 0px;
+
+					legend {
+						float: left;
+						margin-top: -24px;
+						margin-left: 10px;
+						margin-bottom: 0px;
+						width: inherit; /* Or auto */
+						padding: 0 10px; /* To give a bit of padding on the left and right */
+						border-bottom: none;
+						background-color: $white;
+						font-size: inherit;
+						line-height: inherit;
+					}
+
+					legend + * {
+						clear: both;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.forms{
+
+  .datepicker-size{
+    width: 276px;
+    margin: 0px;
+  }
+
+  //Added for WCMSRD-6891
+  .btn{
+    &.btn-white:hover {
+      background-color: $white;
+    }
+  }
+
+  .form-control:disabled {
+    background-color: $graylighter;
+  }
+
+  .form-control::placeholder {
+    color: $graydark;
+    opacity: 1; /* Firefox */
+    }
+
+    .form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color: $graydark;
+    }
+
+    .form-control::-ms-input-placeholder { /* Microsoft Edge */
+      color: $graydark;
+    }
+
+  .typedtext-formscontrols{
+    color: $black;
+  }
+
+  &:focus {
+    @include focusBoxShadow();
+  }
+
+  .fontsize-large-dropdown{
+    font-size: 14px;
+  }
+
+  .dynamicdropdown-counter{
+    //margin-left: 50px;
+    float: right;
+    clear: both;
+  }
+
+  ::-ms-clear {
+    display: none;
+  }
+
+  .has-clear {
+    position: relative;
+
+    .form-control .typetext-field {
+      padding-right: 20px;
+    }
+
+    .form-control-clear {
+      z-index: 10;
+      pointer-events: auto;
+      cursor: pointer;
+      //background-image: url(https://prototype.cdc.gov/TemplatePackage/contrib/icons/other/close-circle.svg);
+      width: 20px;
+      height: 20px;
+
+      position: absolute;
+      top: 0;
+      right: 10px;
+      z-index: 2;
+      display: block;
+
+      line-height: 34px;
+      text-align: center;
+      font-size: 30px;
+    }
+
+  }
+
+
+  .box-margin{
+      margin-bottom: 20px;
+      margin-top: 20px;
+  }
+
+  .bold-hint{
+    margin-top: -5px;
+    margin-bottom: 0px;
+    padding: 0px;
+  }
+
+  .spec-box {
+    margin: 10px;
+    padding: 10px;
+    background: #3da9cc;
+    margin-bottom: 20px;
+  }
+
+  .header-top-space{
+    margin-top: 0px;
+  }
+
+  .row-top{
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
+
+  .label-space-padding{
+    padding: 10px;
+  }
+
+  .label-space-margin{
+    margin: 10px;
+  }
+
+  .label-inline-h2{
+    margin-left:-8px;
+  }
+
+  .margin-container-intems{
+    padding-right: 10px;
+  }
+
+  .form-control.is-invalid {
+    border-color:$red;
+  }
+
+  .invalid-feedback{
+    color: $red;
+    font-size: $fs08;
+    margin-top: $s025;
+  }
+
+  .form-check-input.is-invalid ~ .form-check-label {
+    color: $red;
+}
+
+  .form-container{
+    background-color:rgba(242, 242, 242, 1);
+    padding: 30px;
+  }
+
+.forms-label{
+  margin-top: $s1;
+  margin-bottom: $s05;
+  width: 100%;
+}
+
+.forms-optional{
+  color: $graydark;
+  margin-left: $s05;
+  font-size: $fs08;
+}
+
+.forms-bold-hint{
+  color: $graydark;
+  margin-top: $s025;
+  font-size: $fs08;
+}
+
+
+.form-control {
+  border-color: $gray;
+}
+
+input::placeholder, input::-webkit-input-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $gray;
+    opacity: 1; /* Firefox */
+}
+
+input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $gray;
+}
+
+input::-ms-input-placeholder { /* Microsoft Edge */
+    color: $gray;
+}
+
+/* Radio Button */
+
+:focus{
+  outline:none;
+  @include focusBoxShadow();
+}
+// Added for WCMSRD-6819
+
+  .form-check{
+    margin-bottom: $s05;
+
+    label.form-check-label {
+      padding: 0 $s025;
+
+      &:hover {
+        background-color: $graylighter;
+      }
+    }
+  }
+  //end added
+.radioBig{
+  -webkit-appearance:button;
+  -moz-appearance:button;
+  //appearance:button;
+  border:4px solid #ccc;
+  border-top-color:#bbb;
+  border-left-color:#bbb;
+  background:$white;
+  width:17px;
+  height:17px;
+  border-radius:50%;
+  cursor:pointer;
+
+}
+.radioBig:checked{
+  border:6px solid $graydarker;
+}
+
+/* Big Checkbox */
+
+.big-checkbox {
+     width: 20px;
+     height: 20px;
+   }
+
+   .small-checkbox {
+     width: 13px;
+     height: 13px;
+   }
+
+
+    .button-FooterSpace {
+      margin-bottom: 30px;
+      margin-top: 30px;
+    }
+
+    .resetbutton-Color {
+    //background-color: #E5E5E5;
+    margin-left: 30px
+  }
+
+  //Multi-select - Added for WCMSRD-6819
+
+  //.multiselect-forms {
+    .form-control:focus,
+    select.form-control[multiple]:focus{
+      option {
+        color: $black;
+
+        &:checked {
+          // background hack to override select boxes default browser colors
+          background: $graydark linear-gradient(0deg, $graydark 0%, $graydark 100%);
+
+          &:hover {
+            background: $graydarker linear-gradient(0deg, $graydarker 0%, $graydarker 100%);
+          }
+        }
+
+        &.selected {
+          background-color: $graydark;
+          color: $white;
+
+          &:hover {
+            background-color: $gray;
+            color: $black;
+          }
+        }
+
+        &:hover {
+          background-color: $graylighter;
+        }
+      }
+    }
+  //}
+    //end added
+
+  //Dropdown Hierarchy
+
+  .dropdown{
+    border-color: $gray;
+
+    //Added for WCMSRD-6819
+    .btn{
+      &.dropdown-toggle{
+        max-width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        position: relative;
+        padding-right: $s15;
+      }
+
+      &.dropdown-toggle::after{
+        position: absolute;
+        right: $s05;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    //end added
+
+  }
+
+    //Added for WCMSRD-6819
+  .dropdown-menu {
+
+    min-width:100%;
+
+    .dropdown-item {
+      &:hover{
+        background-color: $graylighter;
+      }
+      &.selected{
+        color: #fff;
+        background-color:$cdcblue;
+      }
+    }
+
+    label.dropdown-header{
+      color: $black;
+      font-weight:bold;
+    }
+  }
+    // end added
+
+  .dropdown-node-one{
+    padding-left: 20px;
+  }
+
+  .dropdown-node-two{
+    padding-left: 35px;
+  }
+
+  .dropdown-node-three{
+    padding-left: 50px;
+  }
+
+  .dropdown-node-four{
+    padding-left: 65px;
+  }
+
+
+	//Grid top Space fix
+	.forms-checkbox-gridtopspace{
+		margin-top: -30px;
+  }
+
+  .required-color{
+    color: #c10000;
+  }
+}
+
+.form-control {
+  &:focus {
+    @include focusBoxShadow();
+  }
+}
+
+.g-recaptcha {
+  display: none;
+}
+.grecaptcha-badge {
+  
+  width: 256px;
+  height: 80px;
+  padding: 0 2px 0 2px;
+  margin-bottom: 1.5rem;
+  font-size: smaller;
+
+  a,
+  a:visited {
+    color: gray;
+  }
+
+  .rc-anchor-logo-img {
+    background: url(https://www.gstatic.com/recaptcha/api2/logo_48.png);
+    background-repeat: no-repeat;
+    height: 48px;
+    width: 48px;
+    float: left;
+    display: inline-block;
+    margin-right: 1rem;
+  }
+
+  .rc-anchor-normal-footer {
+    margin-bottom: 1rem;
+  }
+
+  .rc-anchor-pt {
+    line-height: 48px;
+  }
+
+  .rc-anchor-pt svg {
+    width: 12px
+  }
+
+  .rc-anchor-normal-footer div:first-of-type {
+    margin-bottom: .5rem;
+  }
+
+}

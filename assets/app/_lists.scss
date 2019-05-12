@@ -1,0 +1,173 @@
+/* lists */
+ul, ol {
+    li {
+        margin-bottom: 0.4rem;
+    }
+}
+
+.unstyled-list {
+	list-style-type: none;
+}
+
+// .bullet-list {
+// 	.bullet-list {
+// 		margin-top: 1rem;
+// 		.bullet-list {
+// 			margin-top: 1rem;
+// 		}
+// 	}
+// }
+
+// .ordered-list {
+// 	.ordered-list {
+// 		margin-top: 1rem;
+// 		.ordered-list {
+// 			margin-top: 1rem;
+// 		}
+// 	}
+// }
+
+.outlook-list {
+	.outlook-list {
+		// margin-top: 1rem;
+		list-style-type: lower-alpha;
+		.outlook-list {
+			// margin-top: 1rem;
+			list-style-type: lower-roman;
+		}
+	}
+}
+
+.calendar-list {
+	border: 1px solid #f0f0f0;
+	width: 60px;
+	// display: inline-block;
+	vertical-align: middle;
+	margin-right: 10px;
+	float: left;
+	clear: both;
+	span {
+		display: block;
+		padding: 2px;
+		text-align: center;
+		font-weight: bold;
+	}
+	.month {
+		background: #00695c;
+		color: #fff;
+	}
+	.day {
+		color: #00695c;
+	}
+
+	+a {
+		// vertical-align: top;
+		display: block;
+		overflow: hidden;
+		height: 75px;
+	}
+}
+
+.block-list {
+	list-style-type: none;
+	padding-left: 1rem;
+
+	&.lsp-out {
+		li {
+			margin-left: 0;
+		}
+	}
+
+	li {
+		padding: 0.7rem 0;
+		border-bottom: 1px dashed $graylight;
+		margin-bottom: 1px;
+		&:last-child {border-bottom:none;}
+		&:nth-last-child(2) {
+			margin-bottom: 2px;
+		}
+
+		.list-icon {
+			+ p {
+				overflow: hidden;
+				margin-top: 0;
+			}
+			&.normal {
+				width: 24px;
+				height: 24px;
+				vertical-align: top;
+				margin-right: 10px;
+				margin-bottom: 10px;
+				float: left;
+			}
+			&.large {
+				width: 48px;
+				height: 48px;
+				vertical-align: middle;
+				margin-right: 10px;
+				margin-bottom: 10px;
+				float: left;
+			}
+		}
+	}
+}
+
+.checkbox-list {
+	margin-top: 0;
+	padding-left: 0 !important;
+	list-style-type: none;
+
+	li {
+		position: relative;
+		padding-left: 25px;
+	}
+
+	.fi {
+		position: absolute;
+		left: 0;
+	}
+
+	&.lsp-out li {
+		margin-left: 0;
+	}
+}
+
+.image-list {
+	list-style-type: none;
+	padding-left: 0;
+
+	li {
+		padding: 1rem 0;
+		overflow: auto;
+		border-bottom: 1px solid $graylighter;
+
+
+		img {
+			float: left;
+			margin-right: 1rem;
+			max-width: 150px;
+		}
+
+		p, div {
+			overflow: hidden;
+		}
+	}
+
+	li:last-child {
+		border-bottom: none;
+	}
+}
+
+.card {
+
+	.image-list {
+
+		li {
+
+			&:last-child {
+				margin-bottom: 0;
+				padding-bottom: 0;
+			}
+		}
+	}
+}

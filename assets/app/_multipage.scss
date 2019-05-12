@@ -1,0 +1,39 @@
+/* multipage */
+
+.multi-page {
+    .collapse {
+        a.active {
+            font-weight: bold;
+            color: $black;
+        }
+    }
+}
+
+.tp-multipage {
+	background: $graylightest;
+	border-radius: .25rem;
+	ul {
+		padding-left: 0;
+		li {
+			list-style-type: none;
+			margin-bottom: -5px;
+
+			a {
+				position: relative;
+                top: -20px;
+			}
+
+			&.tp-mp-arrow:last-child {
+				&:after {
+					content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAZiS0dEAAAAAAAA+UO7fwAAAAlwSFlzAAAASAAAAEgARslrPgAAASVJREFUaN7tmDFOw0AQRd9uKko4CBHQpkLKDRJXYI5BOjuigWu4CnEugOIiVVrki9CmsymiCBQrFTPjIM0rp5j9b2dkywbHcRzHcRxHhvQ9Jy1fLY8ciIYnZMCIYXJBXVb/R+BxOSOEl1+VEcNJoF5ttAWiSJcQP4Cvo2JmsU5BrFO6uoGmAq6OjnijmM7OX6AnCZkVOlBMPmmaMZ11ap+11kl2AgceFrfEuMZgEjoChhJ6AkYSugIGEvoCPxIVcCktIfsUOsUgnrqo3V9b60/gaXlHy5ru7ecU0/l5CyiH1xUwCK8nYBReR8AwvLyAcXhZgR7Cywn0FB6kXmQt993w7Vw7PEh9E9fllutkR2C8L4ScIlEPL09aZvu/E47jOI7jOI4F3zk/bUzYQnf/AAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE4LTAzLTIwVDE2OjM5OjEyKzAwOjAwt3gNdgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOC0wMy0yMFQxNjozOToxMiswMDowMMYltcoAAAAodEVYdHN2ZzpiYXNlLXVyaQBmaWxlOi8vL3RtcC9tYWdpY2std05CN1dVZHZOP/85AAAAAElFTkSuQmCC');
+				}
+			}
+
+			&.tp-mp-arrow:first-child {
+				&:before {
+					content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAZiS0dEAAAAAAAA+UO7fwAAAAlwSFlzAAAASAAAAEgARslrPgAAARVJREFUaN7tmDFOAzEQRZ8NDQ1HSS4QOkQuEBaqvQblQgXcAiVVtBwBoRQUQBduAg0goSwFAqQIqsyME+m/0sX3f1vY4wUhhBBCCBFDPT2lbi8sI7dCy5MaYEC/2mHe3myOwG/5bwb0Dt95au9Wjc4FykPHM4lbi/hUqPwB4+pxvQUCyvsJ/FeePGQyerDcyl4gsLy9QHB5W4EC5e0ECpW3EShYHmDbIOP1j8+SyB++d8zPVhbU0xNIy0PaC3kx5Or4fv0FCkpYH6PhEh4XWaiE1ygRJuE5zIVIeI/T7hL+Z7WzhP+LbHx0Cd3Z0uoui7xnER/zJp5fz+iP3iDtA9DRMKnOQ/Y25eu3SrN6kBBCCCGEAPgEKe+DSJLIW5cAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTgtMDMtMjBUMTY6NDA6MzIrMDA6MDAgczRCAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE4LTAzLTIwVDE2OjQwOjMyKzAwOjAwUS6M/gAAACh0RVh0c3ZnOmJhc2UtdXJpAGZpbGU6Ly8vdG1wL21hZ2ljay1ZZkpHTDg0ZisLX9kAAAAASUVORK5CYII=');
+				}
+			}
+		}
+	}
+}

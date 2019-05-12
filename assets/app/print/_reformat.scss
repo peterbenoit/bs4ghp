@@ -1,0 +1,32 @@
+// Show link source
+// For fully qualified URLs only
+*{
+	a {
+		&[href^='http://'],
+		&[href^='https://'] {
+			&:after {
+				content: ' (' attr(href) ')';
+				font-size: 80%;
+				color: $cdcblue;
+			}
+		}
+	}
+	&[data-cdc-slider="standard-slider"] {
+		a {
+			&[href^='http://'],
+			&[href^='https://'] {
+				&:after {
+					color: $white;
+				}
+			}
+		}
+	}
+}
+
+// Show abbreviation or acronym title
+abbr[title],
+acronym[title] {
+	&:after {
+		content: ' (' attr(title) ')';
+	}
+}

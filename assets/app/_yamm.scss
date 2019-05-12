@@ -1,0 +1,119 @@
+/*!
+ * Yamm!3
+ * Yet another megamenu for Bootstrap 3 (and modified for 4)
+ *
+ * https://geedmo.github.com/yamm3
+ */
+
+.yamm .nav,
+.yamm .collapse,
+.yamm .dropup,
+.yamm .dropdown {
+	position: static;
+}
+
+.yamm .container {
+	position: relative;
+}
+
+.yamm .dropdown-menu {
+	left: auto;
+	border-radius: 0;
+	min-width: 400px;  // IE was ignoring the default REM setting
+	@include menuDropShadow;
+}
+
+.yamm .dropdown-toggle::after {
+	margin-left: .5em;
+}
+
+.yamm .nav.navbar-right .dropdown-menu {
+	left: auto;
+	right: 0;
+}
+
+.yamm .yamm-content {
+	padding: 20px 30px;
+}
+
+.yamm .dropdown.yamm-fw .dropdown-menu {
+	left: 0;
+	right: 0;
+}
+
+// .list-unstyled,
+// .list-unstyled ul {
+// 	min-width: 120px
+// }
+
+@media ( min-width: 767px) {
+	.yamm {
+		.panel-group {
+			width: 400px;
+		}
+		.thumbnail {
+			margin: 0;
+		}
+	}
+}
+
+.yamm {
+	.menu-body {
+		padding: 10px 20px;
+	}
+
+	// .menu-body [class*="col-"] {
+	// 	margin-top: 5px;
+	// 	margin-bottom: 5px;
+	// 	font-size: 1em;
+	// 	text-align: center;
+	// 	line-height: 2;
+	// 	background-color: #e5e1ea;
+	// 	border: 1px solid #d1d1d1;
+	// }
+}
+
+
+// @media (min-width: 979px) {
+// 	// open the dropdown on hover on md+ VPs
+// 	.yamm ul.nav li.dropdown:hover>ul.dropdown-menu {
+// 		display: block;
+// 	}
+// }
+
+.yamm .nav-justified .nav-item {
+	flex-basis: auto;
+}
+
+.yamm .nav-item.dropdown.show a.nav-link,
+.yamm .nav-link:hover {
+	background: #88c3ea;
+	color: #000;
+}
+
+.yamm .dropdown-item {
+	border-left: 4px solid #f5f5f5;
+	padding: 0.75rem 1.25rem;
+	border-bottom: 1px dashed #e0e0e0;
+}
+.yamm .dropdown-item:hover {
+	border-left: 4px solid #005eaa;
+	color: #005eaa!important;
+}
+
+.yamm a.dropdown-item, .yamm a:link.dropdown-item {
+	color: #000;
+	&:hover {
+		color: #000;
+	}
+}
+
+
+.yamm .nav-item {
+	margin-bottom: 0;
+}
+
+.yamm .nav-link {
+	padding: 20px 5px;
+	height: 100%;
+}

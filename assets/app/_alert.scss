@@ -1,0 +1,123 @@
+/* alerts */
+
+.alert {
+    h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+        font-family: $opensans;
+        // line-height: 1.3;
+        // margin-top: 0;
+        // margin-bottom: 0;
+
+        a {
+            text-decoration: none;
+        }
+	}
+    // bananna man!
+    .h4 {
+        margin-top: 0;
+    }
+
+    //Container Padding and Margin
+    .padding-pagealert{
+        padding-left: 10px;
+        padding-top: 4px;
+    }
+
+    .margin-pagealert{
+        margin-top: 8px;
+    }
+
+
+
+    //Reverse Link Underline
+	a.link-pagealert {
+        &:link {
+            text-decoration: none;
+        }
+        &:hover, &:active {
+        text-decoration: underline;
+    }
+    }
+
+	// alert box font color
+	p {
+		color: $black;
+	}
+
+	svg {
+		width: 36px;
+		height: 36px;
+	}
+
+    .fi {
+      font-size: 36px;
+      line-height: 1;
+    }
+
+    &.alert-success {
+        background-color: $green-tertiary;
+        border-top: 5px solid $green-primary;
+        //border-bottom: 1px solid $green-primary;
+        hr {
+            border-top-color: $gray;
+		}
+		svg {
+			fill: $green-primary;
+		}
+    }
+    &.alert-danger {
+        background-color: $pink-tertiary;
+        border-top: 5px solid $pink-primary;
+        //border-bottom: 1px solid $pink-primary;
+        hr {
+            border-top-color: $gray;
+		}
+		svg {
+			fill: $pink-primary;
+		}
+        .fi {
+          color: $pink-primary;
+        }
+    }
+    &.alert-warning {
+        background-color: $amber-tertiary;
+        border-top: 5px solid $amber-primary;
+        //border-bottom: 1px solid $amber-primary;
+        hr {
+            border-top-color: $gray;
+		}
+		svg {
+			fill: $amber-primary;
+		}
+        .fi {
+          color: $amber-primary;
+        }
+    }
+    &.alert-info {
+        background-color: $tertiary;
+        border-top: 5px solid $primary;
+        //border-bottom: 1px solid $primary;
+        hr {
+            border-top-color: $gray;
+		}
+		svg {
+			fill: $primary;
+		}
+        .fi {
+          color: $primary;
+        }
+	}
+    &.alert-archive {
+        background-color: $graylighter;
+        border-top: 5px solid $graydarker;
+        //border-bottom: 1px solid $gray;
+        hr {
+            border-top-color: $gray;
+		}
+		svg {
+			fill: $graydarker;
+		}
+        .fi {
+          color: $graydarker;
+        }
+    }
+}

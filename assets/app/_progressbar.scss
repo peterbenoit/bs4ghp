@@ -1,0 +1,17 @@
+// progress bars
+.progress-bar {
+	background-color: $primary;
+
+	&.bg-success {
+		background-color: $green-primary!important;
+	}
+	&.bg-info {
+		background-color: $secondary!important;
+	}
+	&.bg-warning {
+		background-color: $amber-primary!important;
+	}
+	&.bg-danger {
+		background-color: $pink-primary!important;
+	}
+}

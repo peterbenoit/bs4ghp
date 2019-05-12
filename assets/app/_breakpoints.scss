@@ -1,0 +1,102 @@
+/* breakpoints*/
+$xs-max  : '575px';
+$sm      : '576px';
+$sm-down : '767px';
+$md      : '768px';
+$md-down : '991px';
+$lg      : '992px';
+$xl      : '1200px';
+$xxl     : '1440px';
+
+body:after {
+	content: "xs,sm,md,lg,xl,xxl";
+	display: none;
+}
+
+body:before {
+	display: none;
+	content: "xs";
+}
+
+@media (min-width: $sm) {
+	body:before {
+		content: "sm";
+	}
+}
+
+@media (min-width: $md) {
+	body:before {
+		content: "md";
+	}
+}
+
+@media (min-width: $lg) {
+	body:before {
+		content: "lg";
+	}
+}
+
+@media (min-width: $xl) {
+	body:before {
+		content: "xl";
+	}
+}
+
+@media (min-width: $xxl) {
+	body:before {
+		content: "xxl";
+	}
+}
+
+@mixin breakpoint($class) {
+  @if $class == xs {
+    @media (max-width: $xs-max) { @content; }
+  }
+
+  @else if $class == sm {
+    @media (min-width: $sm) { @content; }
+  }
+
+  @else if $class == sm-down {
+    @media (max-width: $sm-down) { @content; }
+  }
+
+  @else if $class == md {
+    @media (min-width: $md) { @content; }
+  }
+
+  @else if $class == md-down {
+    @media (max-width: $md-down) { @content; }
+  }
+
+  @else if $class == lg {
+    @media (min-width: $lg) { @content; }
+  }
+
+  @else if $class == xl {
+    @media (min-width: $xl) { @content; }
+  }
+
+  @else if $class == xxl {
+    @media (min-width: $xxl) { @content; }
+  }
+
+  @else {
+    @warn "Breakpoint mixin supports: xs, sm, sm-down, md, md-down, lg, xl, xxl";
+  }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+// @media (max-width: 575.98px) { ... }
+
+// Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) and (max-width: 767.98px) { ... }
+
+// Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) and (max-width: 991.98px) { ... }
+
+// Large devices (desktops, 992px and up)
+// @media (min-width: 992px) and (max-width: 1199.98px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) { ... }

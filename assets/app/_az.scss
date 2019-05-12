@@ -1,0 +1,51 @@
+.az-strip {
+	a {
+		color: #000;
+		text-decoration: none;
+	}
+	.card {
+		float: left;
+		font-weight: bold;
+		margin-right: 5px;
+		margin-bottom: 5px;
+	}
+
+	.card:hover, .card.active {
+		background: #e0e0e0 !important
+	}
+	.card .card-body {
+		padding-top: .6rem;
+		text-align: center;
+	}
+
+	.w-3 {
+		width: 2.99rem!important;
+	}
+
+	.h-3 {
+		height: 2.99rem!important;
+	}
+}
+
+.az-content {
+	h2 {
+		text-transform: uppercase;
+	}
+}
+
+@media (max-width: 991.98px) {
+	.az-strip {
+		.w-3 {
+			width: 1.99rem!important;
+		}
+
+		.h-3 {
+			height: 1.99rem!important;
+		}
+
+		.card .card-body {
+			padding: 0;
+			padding-top: .2rem;
+		}
+	}
+ }

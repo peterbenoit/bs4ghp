@@ -1,0 +1,29 @@
+/* gov-d */
+
+/* Hey! Check with Pete before you modify this. Thanks! */
+
+.tp-gov-d {
+
+	.card-header {
+		background: $white;
+
+		svg, .fi {
+			vertical-align: middle;
+			margin-right: .5rem;
+			//margin-bottom: .5rem;
+		}
+
+		.fi {
+			color: $govd;
+
+			&:before {
+				position: relative;
+				top: 2px;
+			}
+		}
+	}
+
+	input#gov-d {
+		color: $black;
+	}
+}

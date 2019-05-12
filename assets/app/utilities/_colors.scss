@@ -1,0 +1,521 @@
+/* colors */
+@mixin baseCardColors($backgroundColor, $foregroundColor) {
+	background-color: $backgroundColor !important;
+	color: $foregroundColor;
+
+	&:hover {
+		color: $foregroundColor;
+	}
+	a:not( .btn ) {
+		color: $foregroundColor;
+
+		&:hover { color: $foregroundColor; }
+	};
+	a svg { fill: $foregroundColor; }
+}
+
+@mixin baseTertiaryCardColors($backgroundColor, $foreGroundColor) {
+	background-color: $backgroundColor !important;
+	color: $foreGroundColor;
+
+	&:hover {
+		color: $foreGroundColor;
+	}
+	a svg { fill: $foreGroundColor; }
+
+	&.card-header a { color: $foreGroundColor }
+}
+
+@mixin baseQuaternaryCardColors($backgroundColor, $foreGroundColor) {
+	background-color: $backgroundColor !important;
+	color: $foreGroundColor;
+
+	&:hover {
+		color: $foreGroundColor;
+	}
+	a svg { fill: $foreGroundColor; }
+
+	&.card-header a { color: $foreGroundColor }
+}
+
+@mixin baseButtonColors( $backgroundColor, $foregroundColor) {
+	background-color: $backgroundColor!important;
+	border-color: $backgroundColor;
+	color: $foregroundColor;
+
+	&:hover {
+		background-color: darken($backgroundColor, 5%);
+		color: $foregroundColor;
+	};
+
+	svg { fill: $foregroundColor !important; }
+}
+
+
+// using colors directly (not tied to a theme class)
+.bg-blue-p { @include baseCardColors( $primary, $black ) }
+.bg-blue-s { @include baseCardColors( $secondary, $black ) }
+.bg-blue-t { @include baseTertiaryCardColors( $tertiary, $black ) }
+.bg-blue-q { @include baseQuaternaryCardColors ( $quaternary, $black ) }
+.b-blue-p { border-color: $primary!important; }
+.b-blue-s { border-color: $secondary!important; }
+.b-blue-t { border-color: $tertiary!important; }
+.b-blue-q { border-color: $quaternary!important; }
+.bt-blue-p { border-top-color: $primary!important; }
+.bt-blue-s { border-top-color: $secondary!important; }
+.bt-blue-t { border-top-color: $tertiary!important; }
+.bt-blue-q { border-top-color: $quaternary!important; }
+.br-blue-p { border-right-color: $primary!important; }
+.br-blue-s { border-right-color: $secondary!important; }
+.br-blue-t { border-right-color: $tertiary!important; }
+.br-blue-q { border-right-color: $quaternary!important; }
+.bb-blue-p { border-bottom-color: $primary!important; }
+.bb-blue-s { border-bottom-color: $secondary!important; }
+.bb-blue-t { border-bottom-color: $tertiary!important; }
+.bb-blue-q { border-bottom-color: $quaternary!important; }
+.bl-blue-p { border-left-color: $primary!important; }
+.bl-blue-s { border-left-color: $secondary!important; }
+.bl-blue-t { border-left-color: $tertiary!important; }
+.bl-blue-q { border-left-color: $quaternary!important; }
+svg.fill-blue-p, svg .fill-blue-p, .fill-blue-p { @include iconColor( $primary ) }
+svg.fill-blue-s, svg .fill-blue-s, .fill-blue-s { @include iconColor( $secondary) }
+svg.fill-blue-t, svg .fill-blue-t, .fill-blue-t { @include iconColor( $tertiary ) }
+svg.fill-blue-q, svg .fill-blue-q, .fill-blue-q { @include iconColor( $quaternary ) }
+.btn-blue-p { @include baseButtonColors( $primary, $white ) }
+.btn-blue-s { @include baseButtonColors( $secondary, $black ) }
+.btn-blue-t { @include baseButtonColors( $tertiary, $cdcblue ) }
+.btn-blue-q { @include baseButtonColors( $quaternary, $cdcblue ) }
+
+
+
+.bg-purple-p { @include baseCardColors( $purple-primary, $white ) }
+.bg-purple-s { @include baseCardColors( $purple-secondary, $black ) }
+.bg-purple-t { @include baseTertiaryCardColors( $purple-tertiary, $black ) }
+.bg-purple-q { @include baseQuaternaryCardColors( $purple-quaternary, $black ) }
+.b-purple-p { border-color: $purple-primary!important; }
+.b-purple-s { border-color: $purple-secondary!important; }
+.b-purple-t { border-color: $purple-tertiary!important; }
+.b-purple-q { border-color: $purple-quaternary!important; }
+.bt-purple-p { border-top-color: $purple-primary!important; }
+.bt-purple-s { border-top-color: $purple-secondary!important; }
+.bt-purple-t { border-top-color: $purple-tertiary!important; }
+.bt-purple-q { border-top-color: $purple-quaternary!important; }
+.br-purple-p { border-right-color: $purple-primary!important; }
+.br-purple-s { border-right-color: $purple-secondary!important; }
+.br-purple-t { border-right-color: $purple-tertiary!important; }
+.br-purple-q { border-right-color: $purple-quaternary!important; }
+.bb-purple-p { border-bottom-color: $purple-primary!important; }
+.bb-purple-s { border-bottom-color: $purple-secondary!important; }
+.bb-purple-t { border-bottom-color: $purple-tertiary!important; }
+.bb-purple-q { border-bottom-color: $purple-quaternary!important; }
+.bl-purple-p { border-left-color: $purple-primary!important; }
+.bl-purple-s { border-left-color: $purple-secondary!important; }
+.bl-purple-t { border-left-color: $purple-tertiary!important; }
+.bl-purple-q { border-left-color: $purple-quaternary!important; }
+svg.fill-purple-p, svg .fill-purple-p, .fill-purple-p { @include iconColor( $purple-primary ) }
+svg.fill-purple-s, svg .fill-purple-s, .fill-purple-s { @include iconColor( $purple-secondary ) }
+svg.fill-purple-t, svg .fill-purple-t, .fill-purple-t { @include iconColor( $purple-tertiary ) }
+svg.fill-purple-q, svg .fill-purple-q, .fill-purple-q { @include iconColor( $purple-quaternary ) }
+.btn-purple-p { @include baseButtonColors( $purple-primary, $white ) }
+.btn-purple-s { @include baseButtonColors( $purple-secondary, $black ) }
+.btn-purple-t { @include baseButtonColors( $purple-tertiary, $cdcblue ) }
+.btn-purple-q { @include baseButtonColors( $purple-quaternary, $cdcblue ) }
+
+
+
+
+.bg-brown-p { @include baseCardColors( $brown-primary, $white ) }
+.bg-brown-s { @include baseCardColors( $brown-secondary, $black ) }
+.bg-brown-t { @include baseTertiaryCardColors( $brown-tertiary, $black ) }
+.bg-brown-q { @include baseQuaternaryCardColors( $brown-quaternary, $black ) }
+.b-brown-p { border-color: $brown-primary!important; }
+.b-brown-s { border-color: $brown-secondary!important; }
+.b-brown-t { border-color: $brown-tertiary!important; }
+.b-brown-q { border-color: $brown-quaternary!important; }
+.bt-brown-p { border-top-color: $brown-primary!important; }
+.bt-brown-s { border-top-color: $brown-secondary!important; }
+.bt-brown-t { border-top-color: $brown-tertiary!important; }
+.bt-brown-q { border-top-color: $brown-quaternary!important; }
+.br-brown-p { border-right-color: $brown-primary!important; }
+.br-brown-s { border-right-color: $brown-secondary!important; }
+.br-brown-t { border-right-color: $brown-tertiary!important; }
+.br-brown-q { border-right-color: $brown-quaternary!important; }
+.bb-brown-p { border-bottom-color: $brown-primary!important; }
+.bb-brown-s { border-bottom-color: $brown-secondary!important; }
+.bb-brown-t { border-bottom-color: $brown-tertiary!important; }
+.bb-brown-q { border-bottom-color: $brown-quaternary!important; }
+.bl-brown-p { border-left-color: $brown-primary!important; }
+.bl-brown-s { border-left-color: $brown-secondary!important; }
+.bl-brown-t { border-left-color: $brown-tertiary!important; }
+.bl-brown-q { border-left-color: $brown-quaternary!important; }
+svg.fill-brown-p, svg .fill-brown-p, .fill-brown-p { @include iconColor( $brown-primary ) }
+svg.fill-brown-s, svg .fill-brown-s, .fill-brown-s { @include iconColor( $brown-secondary ) }
+svg.fill-brown-t, svg .fill-brown-t, .fill-brown-t { @include iconColor( $brown-tertiary ) }
+svg.fill-brown-q, svg .fill-brown-q, .fill-brown-q { @include iconColor( $brown-quaternary ) }
+.btn-brown-p { @include baseButtonColors( $brown-primary, $white ) }
+.btn-brown-s { @include baseButtonColors( $brown-secondary, $black ) }
+.btn-brown-t { @include baseButtonColors( $brown-tertiary, $cdcblue ) }
+.btn-brown-q { @include baseButtonColors( $brown-quaternary, $cdcblue ) }
+
+
+
+.bg-teal-p { @include baseCardColors( $teal-primary, $white ) }
+.bg-teal-s { @include baseCardColors( $teal-secondary, $black ) }
+.bg-teal-t { @include baseTertiaryCardColors( $teal-tertiary, $black ) }
+.bg-teal-q { @include baseQuaternaryCardColors( $teal-quaternary, $black ) }
+.b-teal-p { border-color: $teal-primary!important; }
+.b-teal-s { border-color: $teal-secondary!important; }
+.b-teal-t { border-color: $teal-tertiary!important; }
+.b-teal-q { border-color: $teal-quaternary!important; }
+.bt-teal-p { border-top-color: $teal-primary!important; }
+.bt-teal-s { border-top-color: $teal-secondary!important; }
+.bt-teal-t { border-top-color: $teal-tertiary!important; }
+.bt-teal-q { border-top-color: $teal-quaternary!important; }
+.br-teal-p { border-right-color: $teal-primary!important; }
+.br-teal-s { border-right-color: $teal-secondary!important; }
+.br-teal-t { border-right-color: $teal-tertiary!important; }
+.br-teal-q { border-right-color: $teal-quaternary!important; }
+.bb-teal-p { border-bottom-color: $teal-primary!important; }
+.bb-teal-s { border-bottom-color: $teal-secondary!important; }
+.bb-teal-t { border-bottom-color: $teal-tertiary!important; }
+.bb-teal-t { border-bottom-color: $teal-quaternary!important; }
+.bl-teal-p { border-left-color: $teal-primary!important; }
+.bl-teal-s { border-left-color: $teal-secondary!important; }
+.bl-teal-t { border-left-color: $teal-tertiary!important; }
+.bl-teal-q { border-left-color: $teal-quaternary!important; }
+svg.fill-teal-p, svg .fill-teal-p, .fill-teal-p { @include iconColor( $teal-primary ) }
+svg.fill-teal-s, svg .fill-teal-s, .fill-teal-s { @include iconColor( $teal-secondary ) }
+svg.fill-teal-t, svg .fill-teal-t, .fill-teal-t { @include iconColor( $teal-tertiary ) }
+svg.fill-teal-q, svg .fill-teal-q, .fill-teal-q { @include iconColor( $teal-quaternary ) }
+.btn-teal-p { @include baseButtonColors( $teal-primary, $white ) }
+.btn-teal-s { @include baseButtonColors( $teal-secondary, $black ) }
+.btn-teal-t { @include baseButtonColors( $teal-tertiary, $cdcblue ) }
+.btn-teal-q { @include baseButtonColors( $teal-quaternary, $cdcblue ) }
+
+
+
+.bg-orange-p { @include baseCardColors( $orange-primary, $white ) }
+.bg-orange-s { @include baseCardColors( $orange-secondary, $black ) }
+.bg-orange-t { @include baseTertiaryCardColors( $orange-tertiary, $black ) }
+.bg-orange-q { @include baseQuaternaryCardColors( $orange-quaternary, $black ) }
+.b-orange-p { border-color: $orange-primary!important; }
+.b-orange-s { border-color: $orange-secondary!important; }
+.b-orange-t { border-color: $orange-tertiary!important; }
+.b-orange-q { border-color: $orange-quaternary!important; }
+.bt-orange-p { border-top-color: $orange-primary!important; }
+.bt-orange-s { border-top-color: $orange-secondary!important; }
+.bt-orange-t { border-top-color: $orange-tertiary!important; }
+.bt-orange-q { border-top-color: $orange-quaternary!important; }
+.br-orange-p { border-right-color: $orange-primary!important; }
+.br-orange-s { border-right-color: $orange-secondary!important; }
+.br-orange-t { border-right-color: $orange-tertiary!important; }
+.br-orange-q { border-right-color: $orange-quaternary!important; }
+.bb-orange-p { border-bottom-color: $orange-primary!important; }
+.bb-orange-s { border-bottom-color: $orange-secondary!important; }
+.bb-orange-t { border-bottom-color: $orange-tertiary!important; }
+.bb-orange-q { border-bottom-color: $orange-quaternary!important; }
+.bl-orange-p { border-left-color: $orange-primary!important; }
+.bl-orange-s { border-left-color: $orange-secondary!important; }
+.bl-orange-t { border-left-color: $orange-tertiary!important; }
+.bl-orange-q { border-left-color: $orange-quaternary!important; }
+svg.fill-orange-p, svg .fill-orange-p, .fill-orange-p { @include iconColor( $orange-primary ) }
+svg.fill-orange-s, svg .fill-orange-s, .fill-orange-s { @include iconColor( $orange-secondary ) }
+svg.fill-orange-t, svg .fill-orange-t, .fill-orange-t { @include iconColor( $orange-tertiary ) }
+svg.fill-orange-q, svg .fill-orange-q, .fill-orange-q { @include iconColor( $orange-quaternary ) }
+.btn-orange-p { @include baseButtonColors( $orange-primary, $white ) }
+.btn-orange-s { @include baseButtonColors( $orange-secondary, $black ) }
+.btn-orange-t { @include baseButtonColors( $orange-tertiary, $cdcblue ) }
+.btn-orange-q { @include baseButtonColors( $orange-quaternary, $cdcblue ) }
+
+
+
+.bg-pink-p { @include baseCardColors( $pink-primary, $white ) }
+.bg-pink-s { @include baseCardColors( $pink-secondary, $black ) }
+.bg-pink-t { @include baseTertiaryCardColors( $pink-tertiary, $black ) }
+.bg-pink-q { @include baseQuaternaryCardColors( $pink-quaternary, $black ) }
+.b-pink-p { border-color: $pink-primary!important; }
+.b-pink-s { border-color: $pink-secondary!important; }
+.b-pink-t { border-color: $pink-tertiary!important; }
+.b-pink-q { border-color: $pink-quaternary!important; }
+.bt-pink-p { border-top-color: $pink-primary!important; }
+.bt-pink-s { border-top-color: $pink-secondary!important; }
+.bt-pink-t { border-top-color: $pink-tertiary!important; }
+.bt-pink-q { border-top-color: $pink-quaternary!important; }
+.br-pink-p { border-right-color: $pink-primary!important; }
+.br-pink-s { border-right-color: $pink-secondary!important; }
+.br-pink-t { border-right-color: $pink-tertiary!important; }
+.br-pink-q { border-right-color: $pink-quaternary!important; }
+.bb-pink-p { border-bottom-color: $pink-primary!important; }
+.bb-pink-s { border-bottom-color: $pink-secondary!important; }
+.bb-pink-t { border-bottom-color: $pink-tertiary!important; }
+.bb-pink-q { border-bottom-color: $pink-quaternary!important; }
+.bl-pink-p { border-left-color: $pink-primary!important; }
+.bl-pink-s { border-left-color: $pink-secondary!important; }
+.bl-pink-t { border-left-color: $pink-tertiary!important; }
+.bl-pink-q { border-left-color: $pink-quaternary!important; }
+svg.fill-pink-p, svg .fill-pink-p, .fill-pink-p { @include iconColor( $pink-primary ) }
+svg.fill-pink-s, svg .fill-pink-s, .fill-pink-s { @include iconColor( $pink-secondary ) }
+svg.fill-pink-t, svg .fill-pink-t, .fill-pink-t { @include iconColor( $pink-tertiary ) }
+svg.fill-pink-d, svg .fill-pink-d, .fill-pink-d { @include iconColor( $pink-quaternary ) }
+.btn-pink-p { @include baseButtonColors( $pink-primary, $white ) }
+.btn-pink-s { @include baseButtonColors( $pink-secondary, $black ) }
+.btn-pink-t { @include baseButtonColors( $pink-tertiary, $cdcblue ) }
+.btn-pink-q { @include baseButtonColors( $pink-quaternary, $cdcblue ) }
+
+
+.bg-slate-p { @include baseCardColors( $slate-primary, $white ) }
+.bg-slate-s { @include baseCardColors( $slate-secondary, $black ) }
+.bg-slate-t { @include baseTertiaryCardColors( $slate-tertiary, $black ) }
+.bg-slate-q { @include baseQuaternaryCardColors( $slate-quaternary, $black ) }
+.b-slate-p { border-color: $slate-primary!important; }
+.b-slate-s { border-color: $slate-secondary!important; }
+.b-slate-t { border-color: $slate-tertiary!important; }
+.b-slate-q { border-color: $slate-quaternary!important; }
+.bt-slate-p { border-top-color: $slate-primary!important; }
+.bt-slate-s { border-top-color: $slate-secondary!important; }
+.bt-slate-t { border-top-color: $slate-tertiary!important; }
+.bt-slate-q { border-top-color: $slate-quaternary!important; }
+.br-slate-p { border-right-color: $slate-primary!important; }
+.br-slate-s { border-right-color: $slate-secondary!important; }
+.br-slate-t { border-right-color: $slate-tertiary!important; }
+.br-slate-t { border-right-color: $slate-quaternary!important; }
+.bb-slate-p { border-bottom-color: $slate-primary!important; }
+.bb-slate-s { border-bottom-color: $slate-secondary!important; }
+.bb-slate-t { border-bottom-color: $slate-tertiary!important; }
+.bb-slate-t { border-bottom-color: $slate-quaternary!important; }
+.bl-slate-p { border-left-color: $slate-primary!important; }
+.bl-slate-s { border-left-color: $slate-secondary!important; }
+.bl-slate-t { border-left-color: $slate-tertiary!important; }
+.bl-slate-q { border-left-color: $slate-quaternary!important; }
+svg.fill-slate-p, svg .fill-slate-p, .fill-slate-p { @include iconColor( $slate-primary ) }
+svg.fill-slate-s, svg .fill-slate-s, .fill-slate-s { @include iconColor( $slate-secondary ) }
+svg.fill-slate-t, svg .fill-slate-t, .fill-slate-t { @include iconColor( $slate-tertiary ) }
+svg.fill-slate-q, svg .fill-slate-q, .fill-slate-q { @include iconColor( $slate-quaternary ) }
+.btn-slate-p { @include baseButtonColors( $slate-primary, $white ) }
+.btn-slate-s { @include baseButtonColors( $slate-secondary, $black ) }
+.btn-slate-t { @include baseButtonColors( $slate-tertiary, $cdcblue ) }
+.btn-slate-q { @include baseButtonColors( $slate-quaternary, $cdcblue ) }
+
+
+.bg-indigo-p { @include baseCardColors( $indigo-primary, $white ) }
+.bg-indigo-s { @include baseCardColors( $indigo-secondary, $black ) }
+.bg-indigo-t { @include baseTertiaryCardColors( $indigo-tertiary, $black ) }
+.bg-indigo-q { @include baseQuaternaryCardColors( $indigo-quaternary, $black ) }
+.b-indigo-p { border-color: $indigo-primary!important; }
+.b-indigo-s { border-color: $indigo-secondary!important; }
+.b-indigo-t { border-color: $indigo-tertiary!important; }
+.b-indigo-q { border-color: $indigo-quaternary!important; }
+.bt-indigo-p { border-top-color: $indigo-primary!important; }
+.bt-indigo-s { border-top-color: $indigo-secondary!important; }
+.bt-indigo-t { border-top-color: $indigo-tertiary!important; }
+.bt-indigo-q { border-top-color: $indigo-quaternary!important; }
+.br-indigo-p { border-right-color: $indigo-primary!important; }
+.br-indigo-s { border-right-color: $indigo-secondary!important; }
+.br-indigo-t { border-right-color: $indigo-tertiary!important; }
+.br-indigo-q { border-right-color: $indigo-quaternary!important; }
+.bb-indigo-p { border-bottom-color: $indigo-primary!important; }
+.bb-indigo-s { border-bottom-color: $indigo-secondary!important; }
+.bb-indigo-t { border-bottom-color: $indigo-tertiary!important; }
+.bb-indigo-q { border-bottom-color: $indigo-quaternary!important; }
+.bl-indigo-p { border-left-color: $indigo-primary!important; }
+.bl-indigo-s { border-left-color: $indigo-secondary!important; }
+.bl-indigo-t { border-left-color: $indigo-tertiary!important; }
+.bl-indigo-q { border-left-color: $indigo-quaternary!important; }
+svg.fill-indigo-p, svg .fill-indigo-p, .fill-indigo-p { @include iconColor( $indigo-primary ) }
+svg.fill-indigo-s, svg .fill-indigo-s, .fill-indigo-s { @include iconColor( $indigo-secondary ) }
+svg.fill-indigo-t, svg .fill-indigo-t, .fill-indigo-t { @include iconColor( $indigo-tertiary ) }
+svg.fill-indigo-q, svg .fill-indigo-q, .fill-indigo-q { @include iconColor( $indigo-quaternary ) }
+.btn-indigo-p { @include baseButtonColors( $indigo-primary, $white ) }
+.btn-indigo-s { @include baseButtonColors( $indigo-secondary, $black ) }
+.btn-indigo-t { @include baseButtonColors( $indigo-tertiary, $cdcblue ) }
+.btn-indigo-q { @include baseButtonColors( $indigo-quaternary, $cdcblue ) }
+
+
+.bg-cyan-p { @include baseCardColors( $cyan-primary, $white ) }
+.bg-cyan-s { @include baseCardColors( $cyan-secondary, $black ) }
+.bg-cyan-t { @include baseTertiaryCardColors( $cyan-tertiary, $black ) }
+.bg-cyan-q { @include baseQuaternaryCardColors( $cyan-quaternary, $black ) }
+.b-cyan-p { border-color: $cyan-primary!important; }
+.b-cyan-s { border-color: $cyan-secondary!important; }
+.b-cyan-t { border-color: $cyan-tertiary!important; }
+.b-cyan-q { border-color: $cyan-quaternary!important; }
+.bt-cyan-p { border-top-color: $cyan-primary!important; }
+.bt-cyan-s { border-top-color: $cyan-secondary!important; }
+.bt-cyan-t { border-top-color: $cyan-tertiary!important; }
+.bt-cyan-q { border-top-color: $cyan-quaternary!important; }
+.br-cyan-p { border-right-color: $cyan-primary!important; }
+.br-cyan-s { border-right-color: $cyan-secondary!important; }
+.br-cyan-t { border-right-color: $cyan-tertiary!important; }
+.br-cyan-q { border-right-color: $cyan-quaternary!important; }
+.bb-cyan-p { border-bottom-color: $cyan-primary!important; }
+.bb-cyan-s { border-bottom-color: $cyan-secondary!important; }
+.bb-cyan-t { border-bottom-color: $cyan-tertiary!important; }
+.bb-cyan-q { border-bottom-color: $cyan-quaternary!important; }
+.bl-cyan-p { border-left-color: $cyan-primary!important; }
+.bl-cyan-s { border-left-color: $cyan-secondary!important; }
+.bl-cyan-t { border-left-color: $cyan-tertiary!important; }
+.bl-cyan-q { border-left-color: $cyan-quaternary!important; }
+svg.fill-cyan-p, svg .fill-cyan-p, .fill-cyan-p { @include iconColor( $cyan-primary ) }
+svg.fill-cyan-s, svg .fill-cyan-s, .fill-cyan-s { @include iconColor( $cyan-secondary ) }
+svg.fill-cyan-t, svg .fill-cyan-t, .fill-cyan-t { @include iconColor( $cyan-tertiary ) }
+svg.fill-cyan-q, svg .fill-cyan-q, .fill-cyan-q { @include iconColor( $cyan-quaternary ) }
+.btn-cyan-p { @include baseButtonColors( $cyan-primary, $white ) }
+.btn-cyan-s { @include baseButtonColors( $cyan-secondary, $black ) }
+.btn-cyan-t { @include baseButtonColors( $cyan-tertiary, $cdcblue ) }
+.btn-cyan-q { @include baseButtonColors( $cyan-quaternary, $cdcblue ) }
+
+.bg-green-p { @include baseCardColors( $green-primary, $white ) }
+.bg-green-s { @include baseCardColors( $green-secondary, $black ) }
+.bg-green-t { @include baseTertiaryCardColors( $green-tertiary, $black ) }
+.bg-green-q { @include baseQuaternaryCardColors( $green-quaternary, $black ) }
+.b-green-p { border-color: $green-primary!important; }
+.b-green-s { border-color: $green-secondary!important; }
+.b-green-t { border-color: $green-tertiary!important; }
+.b-green-q { border-color: $green-quaternary!important; }
+.bt-green-p { border-top-color: $green-primary!important; }
+.bt-green-s { border-top-color: $green-secondary!important; }
+.bt-green-t { border-top-color: $green-tertiary!important; }
+.bt-green-q { border-top-color: $green-quaternary!important; }
+.br-green-p { border-right-color: $green-primary!important; }
+.br-green-s { border-right-color: $green-secondary!important; }
+.br-green-t { border-right-color: $green-tertiary!important; }
+.br-green-q { border-right-color: $green-quaternary!important; }
+.bb-green-p { border-bottom-color: $green-primary!important; }
+.bb-green-s { border-bottom-color: $green-secondary!important; }
+.bb-green-t { border-bottom-color: $green-tertiary!important; }
+.bb-green-q { border-bottom-color: $green-quaternary!important; }
+.bl-green-p { border-left-color: $green-primary!important; }
+.bl-green-s { border-left-color: $green-secondary!important; }
+.bl-green-t { border-left-color: $green-tertiary!important; }
+.bl-green-q { border-left-color: $green-quaternary!important; }
+svg.fill-green-p, svg .fill-green-p, .fill-green-p { fill: $green-primary!important; &:before { color: $green-primary !important; } }
+svg.fill-green-s, svg .fill-green-s, .fill-green-s { fill: $green-secondary!important; &:before { color: $green-secondary !important; } }
+svg.fill-green-t, svg .fill-green-t, .fill-green-t { fill: $green-tertiary!important; &:before { color: $green-tertiary !important; } }
+svg.fill-green-q, svg .fill-green-q, .fill-green-q { fill: $green-quaternary!important; &:before { color: $green-quaternary !important; } }
+.btn-green-p { @include baseButtonColors( $green-primary, $white ) }
+.btn-green-s { @include baseButtonColors( $green-secondary, $black ) }
+.btn-green-t { @include baseButtonColors( $green-tertiary, $cdcblue ) }
+.btn-green-q { @include baseButtonColors( $green-quaternary, $cdcblue ) }
+
+
+
+.bg-amber-p { @include baseCardColors( $amber-primary, $black ) }
+.bg-amber-s { @include baseCardColors( $amber-secondary, $black ) }
+.bg-amber-t { @include baseTertiaryCardColors( $amber-tertiary, $black ) }
+.bg-amber-q { @include baseQuaternaryCardColors( $amber-quaternary, $black ) }
+.b-amber-p { border-color: $amber-primary!important; }
+.b-amber-s { border-color: $amber-secondary!important; }
+.b-amber-t { border-color: $amber-tertiary!important; }
+.b-amber-q { border-color: $amber-quaternary!important; }
+.bt-amber-p { border-top-color: $amber-primary!important; }
+.bt-amber-s { border-top-color: $amber-secondary!important; }
+.bt-amber-t { border-top-color: $amber-tertiary!important; }
+.bt-amber-q { border-top-color: $amber-quaternary!important; }
+.br-amber-p { border-right-color: $amber-primary!important; }
+.br-amber-s { border-right-color: $amber-secondary!important; }
+.br-amber-t { border-right-color: $amber-tertiary!important; }
+.br-amber-q { border-right-color: $amber-quaternary!important; }
+.bb-amber-p { border-bottom-color: $amber-primary!important; }
+.bb-amber-s { border-bottom-color: $amber-secondary!important; }
+.bb-amber-t { border-bottom-color: $amber-tertiary!important; }
+.bb-amber-q { border-bottom-color: $amber-quaternary!important; }
+.bl-amber-p { border-left-color: $amber-primary!important; }
+.bl-amber-s { border-left-color: $amber-secondary!important; }
+.bl-amber-t { border-left-color: $amber-tertiary!important; }
+.bl-amber-q { border-left-color: $amber-quaternary!important; }
+svg.fill-amber-p, svg .fill-amber-p, .fill-amber-p { @include iconColor( $amber-primary ) }
+svg.fill-amber-s, svg .fill-amber-s, .fill-amber-s { @include iconColor( $amber-secondary ) }
+svg.fill-amber-t, svg .fill-amber-t, .fill-amber-t { @include iconColor( $amber-tertiary ) }
+svg.fill-amber-q, svg .fill-amber-q, .fill-amber-q { @include iconColor( $amber-quaternary ) }
+.btn-amber-p { @include baseButtonColors( $amber-primary, $white ) }
+.btn-amber-s { @include baseButtonColors( $amber-secondary, $black ) }
+.btn-amber-t { @include baseButtonColors( $amber-tertiary, $cdcblue ) }
+.btn-amber-q { @include baseButtonColors( $amber-quaternary, $cdcblue ) }
+
+
+// alerts
+.bg-alert-red, .bg-alert-r { background-color: $alert-red!important; }
+.bg-red, .bg-r { background-color: $red!important; }
+
+
+.bg-white { background: $white!important; &.card-header a { color: $black } }
+.bg-black { background: $black!important; }
+.b-white { border-color: $white!important; }
+.b-black { border-color: $black!important; }
+
+
+
+// grays
+.bg-gray-d2 { @include baseCardColors( $graydarker, $white ) }
+.bg-gray-d1 { @include baseCardColors( $graydark, $white ) }
+.bg-gray    { @include baseCardColors( $gray, $black ) }
+.bg-gray-l1 { @include baseTertiaryCardColors( $graylight, $black )}
+.bg-gray-l2 { @include baseTertiaryCardColors( $graylighter, $black )}
+.bg-gray-l3 { @include baseTertiaryCardColors( $graylightest, $black )}
+
+.btn-gray-d2 { @include baseCardColors( $graydarker, $white ); .file-details { color: $white; } svg { fill: $white !important; } }
+.btn-gray-d1 { @include baseCardColors( $graydark, $white ); svg { fill: $white !important; } }
+.btn-gray { @include baseCardColors( $gray, $black ); svg { fill: $black !important; } }
+.btn-gray-l1 { @include baseCardColors( $graylight, $black ); svg { fill: $black !important; } }
+.btn-gray-l2 { @include baseCardColors( $graylighter, $black ); svg { fill: $black !important; } }
+.btn-gray-l3 { @include baseCardColors( $graylightest, $black ); svg { fill: $black !important; } }
+
+.b-gray-d2 { border-color: $graydarker!important; }
+.b-gray-d1 { border-color: $graydark!important; }
+.b-gray { border-color: $gray!important; }
+.b-gray-l1 { border-color: $graylight!important; }
+.b-gray-l2 { border-color: $graylighter!important; }
+.b-gray-l3 { border-color: $graylightest!important; }
+
+.bt-gray-d2 { border-color: $graydarker!important; }
+.bt-gray-d1 { border-color: $graydark!important; }
+.bt-gray { border-color: $gray!important; }
+.bt-gray-l1 { border-color: $graylight!important; }
+.bt-gray-l2 { border-color: $graylighter!important; }
+.bt-gray-l3 { border-color: $graylightest!important; }
+
+.br-gray-d2 { border-color: $graydarker!important; }
+.br-gray-d1 { border-color: $graydark!important; }
+.br-gray { border-color: $gray!important; }
+.br-gray-l1 { border-color: $graylight!important; }
+.br-gray-l2 { border-color: $graylighter!important; }
+.br-gray-l3 { border-color: $graylightest!important; }
+
+.bb-gray-d2 { border-color: $graydarker!important; }
+.bb-gray-d1 { border-color: $graydark!important; }
+.bb-gray { border-color: $gray!important; }
+.bb-gray-l1 { border-color: $graylight!important; }
+.bb-gray-l2 { border-color: $graylighter!important; }
+.bb-gray-l3 { border-color: $graylightest!important; }
+
+.bl-gray-d2 { border-color: $graydarker!important; }
+.bl-gray-d1 { border-color: $graydark!important; }
+.bl-gray { border-color: $gray!important; }
+.bl-gray-l1 { border-color: $graylight!important; }
+.bl-gray-l2 { border-color: $graylighter!important; }
+.bl-gray-l3 { border-color: $graylightest!important; }
+
+
+// colors
+.c-white, .text-white { color: $white!important; }
+.c-black, .text-black  { color: $black!important; }
+.c-red , .text-red   { color: $red!important; }
+.c-orange , .text-orange   { color: $orange!important; }
+.c-blue, .text-blue  { color: $primary!important; }
+.c-gray-d2, .text-gray-d2  { color: $graydarker!important; }
+.c-gray-d1, .text-gray-d1  { color: $graydark!important; }
+.c-gray, .text-gray  { color: $gray!important; }
+.c-gray-l1, .text-gray-l1  { color: $graylight!important; }
+.c-gray-l2, .text-gray-l2  { color: $graylighter!important; }
+.c-gray-l3, .text-gray-l3  { color: $graylightest!important; }
+
+a {
+	// example: <a href="#" class="btn btn-green-p">link</a>
+	&.btn{
+		&[class$="-p"] {
+			&:hover {
+				color: $white;
+			}
+		}
+	}
+}

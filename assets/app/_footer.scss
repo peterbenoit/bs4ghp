@@ -1,0 +1,115 @@
+/* footer */
+
+footer {
+	.footer-wrapper {
+        font-size: 13px;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        margin-top: 1rem;
+        color: #fff;
+        background-color: #333;
+
+        span {
+            display: block;
+        }
+
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .connect-icons a:hover {
+          text-decoration: none;
+        }
+
+        li {
+            margin-bottom: 3px;
+        }
+
+        ul {
+            padding-left: 0px;
+            list-style-type: none;
+
+            &.list-inline {
+                display: inline-block;
+                margin-bottom: 3px;
+
+                li {
+                    float: left;
+                    margin-right: 10px;
+
+                    img {
+                        width: 24px;
+                    }
+
+                    &.rounded-circle {
+                        background-color: $white;
+                        padding: 7px;
+                        margin-right: 7px;
+                    }
+                }
+            }
+        }
+    }
+
+
+	.agency-footer {
+        font-size: 13px;
+        padding-top: .5rem;
+        padding-bottom: 3rem;
+        margin-bottom: 1rem;
+
+        a {
+            color: $black;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+			}
+
+			&.footer-ext {
+				svg {
+					fill: $black;
+					float: left;
+
+					+span {
+						display: block;
+						overflow: hidden;
+					}
+				}
+			}
+		}
+		a.footer-ext svg {fill:$black;}
+    }
+
+  .language-footer {
+    background: white;
+    padding-top: 1rem;
+
+    @media only screen and (max-width: 991px) {
+      margin-bottom: 3rem !important;
+    }
+
+    strong {
+      font-size: 13px;
+      color: $graydarker;
+      a {
+        color: $graydarker;
+      }
+    }
+
+    span {
+      a {
+        color: $graydarker;
+      }
+    }
+
+  }
+}

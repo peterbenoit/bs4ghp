@@ -1,0 +1,31 @@
+/* breadcrumbs */
+
+.breadcrumb-item {
+    & + .breadcrumb-item {
+        &:before {
+			content: ">";
+			color: $gray;
+        }
+        &.active {
+            color: #000;
+        }
+    }
+}
+
+.container ol.breadcrumb {padding-left:0; padding-right:0;}
+
+.breadcrumb {
+    background-color: $graylightest;
+    font-size: $fs0875;
+	margin-bottom: 0;
+
+    li {
+        margin-bottom: 0;
+    }
+    a {
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+    }
+}

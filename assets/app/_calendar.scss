@@ -1,0 +1,53 @@
+.calendar-card {
+    width: 100px;
+    background-color: rgba(255, 236, 179, 1);
+    
+    .card-body {
+           padding: .5rem;
+           text-align: center;
+    }
+    .month, .s-day {
+           font-size: .75rem;
+    }
+    
+    .n-day {
+           font-size: 3rem;
+           line-height: 2.5rem;
+    }
+}
+
+.card.calendar-card span {
+  display: inline-block;
+}
+
+@media (max-width: 767px) {
+    .calendar-card {
+           width: 100%;
+
+           .month, .s-day {
+                  font-size: 1rem;
+           }
+
+           .n-day {
+                  font-size: 1.5rem;
+                  margin-left: 7px;
+                  margin-right: 7px;
+           }
+    }
+
+    .event-card-body {
+      order:1;
+    }
+
+    .event-row {
+      margin-left: -30px !important;
+    }
+
+}
+
+
+
+
+
+
+

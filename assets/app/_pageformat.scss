@@ -1,0 +1,20 @@
+.page-format {
+	background-color: $graylightest;
+	margin-top: 1rem;
+	padding-top: .5rem;
+	padding-bottom: .5rem;
+	a {
+		display: inline-block;
+		margin-left: 1rem;
+		color: $black;
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	svg {
+		vertical-align: middle;
+		margin-right: .5rem;
+	}
+}

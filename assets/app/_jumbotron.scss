@@ -1,0 +1,128 @@
+/* jumbotrons */
+
+a.jumbotron-btn {
+	color: inherit;
+	text-decoration: initial;
+	.btn {
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+.jumbotron {
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 0 15px;
+	border-radius: 0;
+	position: relative;
+	overflow: hidden;
+
+	h1, h2, h3, h4, h5, h6 {
+		margin-top: 0;
+	}
+
+	&.jumbotron-light {
+		.jumbotron-overlay {
+			background-color: rgba(255,255,255,0.75);
+			color: $black;
+		}
+	}
+
+	&.jumbotron-dark {
+		.jumbotron-overlay {
+			background-color: rgba(0,0,0,0.75);
+            color: $white;
+            a:not(.btn) {
+                color: $white;
+            }
+		}
+	}
+
+	&.tb-rc { //transparent-border, rounded corners
+		border-radius: .25rem;
+		//border: 0 solid transparent !important;
+		.card-body {
+			border-radius: .25rem;
+		}
+	}
+
+	.jumbotron-overlay {
+		padding: 1rem;
+		position: absolute;
+		overflow: hidden;
+
+		&.overlay-fullheight {
+			max-height: 100%;
+			height: 100%;
+		}
+
+		&.overlay-left {
+			left: 0;
+			top: 0;
+		}
+
+		&.overlay-right {
+			right: 0;
+			top: 0;
+		}
+
+		&.overlay-bottom {
+			left: 0;
+			bottom: 0;
+			// max-height: 50%;
+			width: 100%;
+		}
+
+		&.overlay-middle {
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%) !important;
+			// max-height: 50%;
+			width: 100%;
+		}
+	}
+}
+
+// large
+@media (min-width: 992px) and (max-width: 1199.98px) {
+	.jumbotron {
+		.display-5, .display-4, .display-3 {
+			font-size: 1.5rem;
+		}
+	}
+}
+
+// xs - medium
+@media (max-width: 991.98px) {
+	.jumbotron {
+		.display-5, .display-4, .display-3 {
+			font-size:  1.375rem; // .h4
+		}
+		.jumbotron-overlay {
+			&.overlay-fullheight,
+			&.overlay-left,
+			&.overlay-right,
+			&.overlay-bottom,
+			&.overlay-middle {
+				top: 100%;
+				left: 0;
+				bottom: 0;
+				// max-height: 33%;
+				height: auto;
+				width: 100%!important;
+				transform: none!important;
+				position: relative;
+				background: $graylight;
+				color: $black;
+			}
+
+			a {
+				text-decoration: none
+			}
+		}
+		.m-5 {
+			margin: 0!important;
+		}
+	}
+}

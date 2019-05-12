@@ -1,0 +1,158 @@
+/* svg */
+// todo this mixin is defined in the mixins file, but _svg.scss can't see it. figure out why
+@mixin iconColor($color) {
+	fill: $color!important;
+
+	&:before {
+		color: $color !important;
+	}
+}
+
+.fill-w { @include iconColor( $white ); }
+.fill-b { @include iconColor( $primary ); }
+
+.fill-epub { @include iconColor( $epub ); }
+.fill-excel { @include iconColor( $excel ); }
+.fill-govd { @include iconColor( $govd ); }
+.fill-pdf { @include iconColor( $pdf ); }
+.fill-ppt { @include iconColor( $ppt ); }
+.fill-fb { @include iconColor( #3d5a98 ); }
+.fill-tw { @include iconColor( #1da1f2 ); }
+.fill-synd1 {@include iconColor(#0060aa ); }
+.fill-synd, .fill-synd2 { @include iconColor( #f26722 ); }
+.fill-email, .fill-em { @include iconColor( #4f4f4f ); }
+.fill-linkin { @include iconColor( #007bb5 ); }
+.fill-svgimgfile { @include iconColor( #5e5887 ); }
+.fill-media { @include iconColor( #0060aa ); }
+.fill-txt { @include iconColor( $graydark ); }
+
+.fill-txt-1 { @include iconColor( #b0bec5 ); }
+.fill-txt-2 { opacity: 0.2; }
+.fill-txt-3 { @include iconColor( #455a64 ) }
+.fill-txt-4 { @include iconColor( #fff ) }
+
+.fill-zip-1 { @include iconColor( #ffca28 ); }
+.fill-zip-2 { opacity: 0.2; }
+.fill-zip-3 { @include iconColor( #3e2723 ) }
+
+.fill-epub-1 { @include iconColor( #86b916 ); }
+.fill-epub-2 { opacity: 0.2; }
+.fill-epub-3 { @include iconColor( #fff ) }
+
+.fill-gray-d2 { @include iconColor( $graydarker ); }
+.fill-gray-d1 { @include iconColor( $graydark ); }
+.fill-gray { @include iconColor( $gray ); }
+.fill-gray-l1 { @include iconColor( $graylight ); }
+.fill-gray-l2 { @include iconColor( $graylighter ); }
+.fill-gray-l3 { @include iconColor( $graylightest ); }
+
+.fill-h {
+	@include iconColor( $primary );
+	&:hover {
+		fill: lighten( $primary, 15% )!important;
+	}
+}
+
+.fill-lg { fill:url(#linear-gradient); }
+.fill-mask { mask:url(#mask); }
+.fill-op-2 { opacity: 0.2; }
+.fr-evenodd { fill-rule: evenodd; }
+
+.fill-op-2,
+.zip-fill-2 {
+	opacity: .2
+}
+
+.fill-ppt-1 { @include iconColor( #c1272d ); }
+
+.fill-ppt-2 { @include iconColor( #fff ); }
+
+.fill-pdf-1 { @include iconColor( #c1272d ); }
+
+.fill-pdf-2 { @include iconColor( #fff ); }
+
+.zip-fill-1 { @include iconColor( #ffca28 ); }
+
+.zip-fill-3 { @include iconColor( #3e2723 ); }
+
+.txt-fill-1 { @include iconColor( #b0bec5 ); }
+
+.txt-fill-2 { opacity: 0.2; }
+
+.txt-fill-3 { @include iconColor( #455a64 ); }
+
+.txt-fill-4 { @include iconColor( #fff ); }
+
+.word-fill-1 { @include iconColor( #2a5699 ); }
+
+.word-fill-2 { fill: #fff; }
+
+.media-fill-1 { @include iconColor( #2196f3 ); }
+
+.media-fill-2 {
+	fill: none;
+	stroke: #fff;
+	stroke-miterlimit: 10;
+	stroke-width: 2px;
+}
+
+.media-fill-3 { @include iconColor( #fff ); }
+
+.fill-excel-1 { @include iconColor( #207245 ); }
+
+.fill-excel-2 { @include iconColor( #fff ); }
+
+.fill-epub-1 { @include iconColor( #86b916 ); }
+
+.fill-epub-2 { @include iconColor( #fff ); }
+
+.fill-op-2 { opacity: 0.2; }
+
+.fill-figure { @include iconColor( #E41928 ); }
+
+.fill-tumblr { @include iconColor( $tumblr ); }
+
+.svg-1 { width: 1rem; height: 1rem; }
+.svg-2 { width: 2rem; height: 2rem; }
+.svg-3 { width: 3rem; height: 3rem; }
+.svg-4 { width: 4rem; height: 4rem; }
+.svg-5 { width: 5rem; height: 5rem; }
+
+// svg and icon font sizes
+$icon-size-list: (
+	10, 16, 20, 24, 28, 32, 36, 40, 48, 64, 96, 128, 256
+);
+
+@each $value in $icon-size-list {
+	.x#{$value} {
+		width: #{$value}px !important; // need to target icons to avoid this
+		height: #{$value}px;
+		svg {
+			width: #{$value}px;
+			height: #{$value}px;
+		}
+		//icon fonts
+		&:before {
+			font-size: #{$value}px;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+
+	@each $value in $icon-size-list {
+		.x#{$value}l {
+			width: #{$value}px;
+			height: #{$value}px;
+			svg {
+				width: #{$value}px;
+				height: #{$value}px;
+			}
+			//icon fonts
+			&:before {
+				font-size: #{$value}px;
+			}
+		}
+	}
+}
+

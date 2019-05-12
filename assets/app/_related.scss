@@ -1,0 +1,14 @@
+/* related topics */
+
+.related-topics {
+	.list-group-item {
+		border: 1px dashed $graylight;
+		border-left: 0;
+		border-right: 0;
+		padding-left: 0;
+
+		a {
+			text-decoration: none;
+		}
+	}
+}
