@@ -5,8 +5,6 @@
     {%- include head-content.html -%}
 </head>
 <body class="no-js">
-	Page Created {{ page.created | date: "%F %H:%M:%S %z" }}
-	
     {%- include skipmenu.html -%}
 
     <!-- (1) Global Alerts Area  -->
@@ -37,8 +35,8 @@
 				<div class="row">
 					<div class="col">
 						<!-- (5) Site Title -->
-                        <div class="display-6 text-white fw-500">Site Title</div>
-                        <p class="tagline d-none d-md-inline-block">Tagline</p>
+						<div class="display-6 text-white fw-500">Site Title</div>
+						<p class="tagline d-none d-md-inline-block">Tagline</p>
 					</div>
 					<div class="site-title-image col-lg-2 col-md-12">
 						<!-- (6) Site Identity Area -->
@@ -63,7 +61,7 @@
 				</div>
 				<!-- (9) Page Share -->
 				<div class="col-sm-3 page-share">
-                    <!-- page share -->
+                    			<!-- page share -->
 				</div>
 			</div>
 		</div>
@@ -99,14 +97,15 @@
 				<div class="col content">
 					<!-- (15) Page Title -->
 					<!-- (16) Page Language -->
-                    <!-- (17) Content Area -->
-                    {{ content }}
+				    <!-- (17) Content Area -->
+				    {{ content }}
 				</div>
-            </div>
+            		</div>
 
 			<!-- (19) Page Format -->
 			<div class="row">
 				<div class="col page-format">
+					Page Created {{ page.created | date: "%F %H:%M:%S %z" }}
 				</div>
 			</div>
 
