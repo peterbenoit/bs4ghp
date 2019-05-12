@@ -1,0 +1,6 @@
+{% extends sourceAbsolute.layouts + layouts.includes %}{% block main %}
+<!-- Application Requirements; Jquery, Bootstrap, AppJs  -->
+<script src="{{data.site.paths.web.vendor.js}}jquery.min.js?{{ dateVars.nowUtc }}"></script>
+<script src="{{data.site.paths.web.vendor.js}}bootstrap.bundle.js?{{ dateVars.nowUtc }}"></script>
+<script src="{{data.site.paths.web.js}}app.bundle.min.js?{{ dateVars.nowUtc }}"></script>
+{% endblock %}

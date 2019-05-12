@@ -1,0 +1,13 @@
+{% extends sourceAbsolute.layouts + layouts.includes %}{% block main %}
+    <!-- Global / universal meta tags -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
+	<meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <link rel="stylesheet prefetch" href="{{data.site.paths.web.assets}}css/font.css" />
+    <link rel="stylesheet prefetch" href="{{data.site.paths.web.vendor.css}}bootstrap.css?{{ dateVars.nowUtc }}" />
+	<link rel="stylesheet prefetch" href="{{data.site.paths.web.css}}app.min.css?{{ dateVars.nowUtc }}" />
+	<link rel="stylesheet" media="print" href="{{data.site.paths.web.css}}print.css?{{ dateVars.nowUtc }}" />
+{% endblock %}

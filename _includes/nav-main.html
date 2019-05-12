@@ -1,0 +1,154 @@
+{% extends sourceAbsolute.layouts + layouts.includes %}
+
+{% macro subNav(level, pagesArray) %}
+<div class="field">
+  <input type="{{ type }}" name="{{ name }}"
+         value="{{ value | escape }}" />
+</div>
+{% endmacro %}
+
+
+{% block main %}
+<nav role="navigation" aria-label="Left Navigation Menu">
+	<div class="nav-section-home d-sm-block">
+		<span class="sr-only">home</span>
+		<span class="fi cdc-icon-home nav-home-icon x24" aria-hidden="true"></span>
+		<a href="{{ data.site.paths.web.root }}gallery-internal/index.html">TP Docs Home</a>
+	</div>
+
+	<!-- LEVEL ONE CONTAINER-->
+	<ul class="list-group tp-nav-main">
+		{% for group_level_one in data.nav %}
+
+			{# SET LEVEL ONE VARS #}
+			{% set group_level_one_slug = group_level_one.title | slugify %}
+			{% set group_level_one_directory %}gallery-internal/{{ group_level_one_slug }}/{% endset %}
+
+			{# FILENAME / SLUG #}
+			{% if group_level_one.filename %}
+				{% set group_level_one_slug = group_level_one.filename %}
+			{% endif %}
+			{# FILEPATH #}
+			{% if group_level_one.filepath %}
+				{% set group_level_one_directory = group_level_one.filepath %}
+			{% endif %}
+
+			<!-- LEVEL ONE ITEM -->
+			<li class="list-group-item nav-lvl1">
+				<a href="{{ data.site.paths.web.root }}{{ group_level_one_directory }}" aria-expanded="true" >{{ group_level_one.title }}</a>
+
+				{% if group_level_one.pages %}
+					<!-- LEVEL ONE WITH LEVEL TWO LINKS -->
+					{% if group_level_one.pages.length %}
+					<a href="#nav-group-{{ group_level_one_slug }}" class="nav-plus nav-expandcollapse" data-toggle="collapse" aria-controls="nav-group-{{group_level_one_slug}}">
+						<span class="sr-only">plus icon</span>
+						<span class="fi cdc-icon-plus" aria-hidden="true"></span>
+					</a>
+					{% endif %}
+
+					<!-- LEVEL TWO CONTAINER -->
+					<ul id="nav-group-{{ group_level_one_slug }}" class="collapse">
+						{% for group_level_two in group_level_one.pages %}
+
+							{# SET LEVEL TWO VARS #}
+							{% set group_level_two_slug = group_level_two.title | slugify %}
+							{% set group_level_two_directory %}{{ group_level_one_directory }}{% endset %}
+
+							{# FILENAME / SLUG #}
+							{% if group_level_two.filename %}
+								{% set group_level_two_slug = group_level_two.filename %}
+							{% endif %}
+							{# FILEPATH #}
+							{% if group_level_two.filepath %}
+								{% set group_level_two_directory = group_level_two.filepath %}
+							{% endif %}
+
+							<!-- LEVEL TWO ITEM -->
+							<li class="list-group-item nav-lvl2">
+								<!-- group_level_one_directory: {{ group_level_one_directory }} -->
+								<!-- group_level_one_slug: {{ group_level_one_slug }} -->
+								<!-- group_level_two_directory: {{ group_level_two_directory }} -->
+								<!-- group_level_two_slug: {{ group_level_two_slug }} -->
+								<a href="{{ data.site.paths.web.root }}{{ group_level_two_directory }}{{ group_level_two_slug }}.html" aria-expanded="true">{{ group_level_two.title }}</a>
+
+								{% if group_level_two.pages %}
+									<!-- LEVEL TWO WITH LEVEL THREE LINKS -->
+									{% if group_level_two.pages.length %}
+									<a href="#nav-group-{{group_level_two_slug}}" class="nav-plus nav-expandcollapse" data-toggle="collapse" aria-controls="nav-group-{{group_level_two_slug}}">
+										<span class="sr-only">plus icon</span>
+										<span class="fi cdc-icon-plus" aria-hidden="true"></span>
+									</a>
+									{% endif %}
+
+									<!-- LEVEL THREE CONTAINER -->
+									<ul id="nav-group-{{group_level_two_slug}}" class="collapse">
+										{% for group_level_three in group_level_two.pages %}
+
+											{# SET LEVEL THREE VARS #}
+											{% set group_level_three_slug = group_level_three.title | slugify %}
+											{% set group_level_three_directory %}{{ group_level_two_directory }}{{ group_level_three_slug }}/{% endset %}
+
+											{# FILENAME / SLUG #}
+											{% if group_level_three.filename %}
+												{% set group_level_three_slug = group_level_three.filename %}
+											{% endif %}
+											{# FILEPATH #}
+											{% if group_level_three.filepath %}
+												{% set group_level_three_directory = group_level_three.filepath %}
+											{% endif %}
+
+											<!-- LEVEL THREE ITEM -->
+											<li class="list-group-item nav-lvl3">
+												<a href="{{ data.site.paths.web.root }}{{ group_level_three_directory }}{{ group_level_three_slug }}.html">{{ group_level_three.title }}</a>
+
+												{% if group_level_three.pages %}
+													<!-- LEVEL THREE WITH LEVEL FOUR LINKS -->
+													{% if group_level_three.pages.length %}
+													<a href="#nav-group-{{group_level_three_slug}}" class="nav-plus nav-expandcollapse" data-toggle="collapse" aria-controls="nav-group-{{group_level_three_slug}}">
+														<span class="sr-only">plus icon</span>
+														<span class="fi cdc-icon-plus" aria-hidden="true"></span>
+													</a>
+													{% endif %}
+
+													<!-- LEVEL FOUR CONTAINER -->
+													<ul id="nav-group-{{group_level_three_slug}}" class="collapse">
+														{% for group_level_four in group_level_three.pages %}
+
+															{# SET LEVEL FOUR VARS #}
+															{% set group_level_four_slug = group_level_four.title | slugify %}
+															{% set group_level_four_directory %}gallery-internal/{{ group_level_one_slug }}/{{ group_level_two_slug }}/{{ group_level_three_slug }}/{{group_level_three_slug }}/{% endset %}
+
+															{# FILENAME / SLUG #}
+															{% if group_level_four.filename %}
+																{% set group_level_four_slug = group_level_four.filename %}
+															{% endif %}
+															{# FILEPATH #}
+															{% if group_level_four.filepath %}
+																{% set group_level_four_directory = group_level_four.filepath %}
+															{% endif %}
+
+															<!-- LEVEL FOUR ITEM -->
+															<li class="list-group-item nav-lvl4">
+																<a href="{{ data.site.paths.web.root }}{{ group_level_four_directory }}{{ group_level_four_slug }}.html">{{ group_level_four.title }}</a>
+															</li>
+														{% endfor %}
+													</ul>
+
+												{% endif %}
+											</li>
+										{% endfor %}
+									</ul>
+
+								{% endif %}
+							</li>
+
+						{% endfor %}
+					</ul>
+
+				{% endif %}
+			</li>
+		{% endfor %}
+
+	</ul>
+</nav>
+{% endblock %}
