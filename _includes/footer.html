@@ -1,7 +1,6 @@
-{% extends sourceAbsolute.layouts + layouts.includes %}{% block main %}
 <div class="footer-wrapper">
     <footer role="contentinfo" aria-label="Footer">
-        <div class="{{ baseContainerClasses }}">
+        <div class="container">
             <div class="row">
                 <div class="col-md-5 pl-md-5">
 					<address class="col-md-3" itemscope="itemscope" itemtype="https://schema.org/Organization">
@@ -66,7 +65,7 @@
 </div>
 <div class="container-fluid agency-footer">
     <footer role="contentinfo" aria-label="Agency Footer">
-        <div class="{{ baseContainerClasses }}">
+        <div class="container">
             <div class="row">
                 <div class="col-5 pl-md-5 d-none d-md-block">
                     <a href="#">U.S. Department of Health &amp; Human Services</a>
@@ -81,4 +80,3 @@
         </div>
     </footer>
 </div>
-{% endblock %}
