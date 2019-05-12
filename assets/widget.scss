@@ -1,7 +1,10 @@
-@import 'variables';
-@import 'social-media';
-@import 'utilities/svg';
-@import 'links';
+---
+---
+
+@import 'app/variables';
+@import 'app/social-media';
+@import 'app/utilities/svg';
+@import 'app/links';
 
 .sr-only {
 	position: absolute;
