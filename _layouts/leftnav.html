@@ -74,7 +74,7 @@
 	<div class="container d-flex flex-wrap body-wrapper">
 
 		<!-- Content (13 through 19) -->
-		<main class="container" role="main" aria-label="Main Content Area">
+		<main class="container" role="main" aria-label="Main Content Area" class="col-lg-9 order-lg-2">
 			<!-- (13) Visual Element -->
 			<div class="row d-none d-md-block visual-element">
 				<!-- Visual Element -->
@@ -84,29 +84,14 @@
 				<!-- audience identity -->
 			</div>
 
-			<!-- (DEV ONLY) Section Nav Area -->
-			<!-- <div class="docs-right-rail">
-				<nav role="navigation" aria-label="Section Nav" class="w-100 d-md-none sticky-top">
-				</nav>
-			</div> -->
-
-			<!-- (17) Content Area -->
 			<div class="row">
 				<div class="col content">
 					<!-- (15) Page Title -->
 					<!-- (16) Page Language -->
-				    <!-- (17) Content Area -->
+					<!-- (17) Content Area -->
+					{{ content }}
 				</div>
 			</div>
-
-			<!-- (19) Page Format -->
-			<div class="row">
-				<div class="col page-format">
-				</div>
-			</div>
-
-			<!-- (18) Persistent Content Area -->
-			<div class="row"></div>
 
 			<!-- (20) Date Updated -->
 			<div class="row">
@@ -119,9 +104,53 @@
 		<div class="col-lg-3 order-lg-1 leftnav-wrapper">
 			<!-- (11) Left Nav (Bottom Nav on smaller viewports) -->
 
+			<nav role="navigation" aria-label="Left Navigation Menu">
+				<div class="nav-section-home d-sm-block">
+					<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 24 24">
+						<title>home</title><path d="M9.984 20.016h-4.969v-8.016h-3l9.984-9 9.984 9h-3v8.016h-4.969v-6h-4.031v6z"></path>
+					</svg>
+					<a href="#">Home</a>
+				</div>
+				<ul id="nav-primary" class="list-group tp-nav-main">
+					<li class="list-group-item nav-lvl1"><a href="#l1a">Level 1 A</a></li>
+					<li class="list-group-item nav-lvl1"><a href="#l1b">Level 1 B</a></li>
+					<li class="list-group-item nav-lvl1 active selected">
+						<a href="#l1c" class="list-group-item-action">Level 1 C</a>
+						<a href="#l1cChild" class="nav-expandcollapse nav-minus" data-toggle="collapse" aria-controls="l1cChild">
+							<svg viewBox="0 0 24 24">
+								<title>collapse</title><path d="M19,13H5V11H19V13Z"></path>
+							</svg>
+						</a>
+						<ul class="collapse show" id="l1cChild">
+							<li class="list-group-item nav-lvl2"><a href="#l2a">Level 2 A</a></li>
+							<li class="list-group-item nav-lvl2"><a href="#l2b">Level 2 B</a></li>
+							<li class="list-group-item nav-lvl2">
+								<a href="#l2c" class="list-group-item-action">Level 2 C</a>
+								<a href="#l2cChild" class="nav-expandcollapse nav-minus" data-toggle="collapse" aria-controls="l2cChild">
+									<svg viewBox="0 0 24 24">
+										<title>collapse</title><path d="M19,13H5V11H19V13Z"></path>
+									</svg>
+								</a>
+								<ul class="collapse show" id="l2cChild">
+									<li class="list-group-item nav-lvl3"><a href="#l3a">Level 3 A</a></li>
+									<li class="list-group-item nav-lvl3"><a href="#l3b">Level 3 B</a></li>
+								</ul>
+							</li>
+							<li class="list-group-item nav-lvl2"><a href="#l2d">Level 2 D</a></li>
+							<li class="list-group-item nav-lvl2"><a href="#l2e">Level 2 E</a></li>
+						</ul>
+					</li>
+					<li class="list-group-item nav-lvl1"><a href="#l1d">Level 1 D</a></li>
+					<li class="list-group-item nav-lvl1"><a href="#l1e">Level 1 E</a></li>
+				</ul>
+			</nav>
+
+
+
 			<!-- (12) Under Left Nav (Hidden when left nav shifts to bottom nav ) -->
 			<div class="row d-md-none">
 				<div class="col under-left-nav">
+					<pre>[Under Left Nav]</pre>
 				</div>
 			</div>
 		</div>

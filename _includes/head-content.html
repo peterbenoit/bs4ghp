@@ -5,7 +5,13 @@
 	<meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
 
+	{% if app.site.isDevTarget == true %}
 	<link rel="shortcut icon" href="{{ "/imgs/favicon.ico" | relative_url }}">
 	<link rel="stylesheet prefetch" href="{{ "/assets/bootstrap.css" | relative_url }}?{{ site.time | date: '%m%d%Y' }}" />
 	<link rel="stylesheet prefetch" href="{{ "/assets/app.css" | relative_url }}?{{ site.time | date: '%m%d%Y' }}" />
-	<link rel="stylesheet" media="print" href="{{ "/assets/print.css" | relative_url }}?{{ site.time | date: '%m%d%Y' }}" />
+	{% else %}
+	<link rel="shortcut icon" href="https://www.cdc.gov/TemplatePackage/4.0/assets/imgs/favicon.ico" />
+	<link rel="stylesheet prefetch" href="https://www.cdc.gov/TemplatePackage/4.0/assets/vendor/css/bootstrap.css?{{ site.time | date: '%m%d%Y' }}" />
+	<link rel="stylesheet prefetch" href="https://www.cdc.gov/TemplatePackage/4.0/assets/css/app.min.css?{{ site.time | date: '%m%d%Y' }}" />
+	<link rel="stylesheet" media="print" href="https://www.cdc.gov/TemplatePackage/4.0/assets/css/print.css?{{ site.time | date: '%m%d%Y' }}" />
+	{% endif %}

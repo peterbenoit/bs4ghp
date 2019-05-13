@@ -5,12 +5,41 @@
 
 // Some customization of the container class to have a better display in the guide.
 // Don't hesitate to remove it to have a standard Bootstrap behavior
-// $container-max-widths: (
-//   sm: 540px,
-//   md: 640px,
-//   lg: 690px,
-//   xl: 720px
-// ) !default;
+$grid-breakpoints: (
+  xxxs: 0,
+  xxs: 320px,
+  xs: 568px,
+  sm: 667px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1440px,
+//   xxxl: 1600px
+)  !default;
+
+$container-max-widths: (
+  xxxs: 0,
+  xxs: 320px,
+  xs: 568px,
+  sm: 667px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1440px,
+//   xxxl: 1600px
+) !default;
+
+:root {
+  --breakpoint-xxxs: 0;
+  --breakpoint-xxs: 320px;
+  --breakpoint-xs: 568px;
+  --breakpoint-sm: 667px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-xxl: 1440px;
+//   --breakpoint-xxxl: 1600px;
+}
 
 // Minty 4.3.1
 // Bootswatch

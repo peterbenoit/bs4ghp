@@ -8,13 +8,13 @@
     <script src="/TemplatePackage/contrib/libs/cdc/ab/4.0.0/ab.js"></script>
     <script src="{{app.site.paths.web.js}}app.bundle.js?{{ site.time | date: '%m%d%Y' }}"></script>
 {% else %}
-    <script src="{{ "/assets/js/jquery.min.js" | relative_url }}?{{ site.time | date: '%m%d%Y' }}"></script>
-    <script src="{{ "/assets/js/bootstrap.bundle.min.js" | relative_url }}?{{ site.time | date: '%m%d%Y' }}"></script>
+    <script src="https://www.cdc.gov/TemplatePackage/4.0/assets/vendor/js/jquery.min.js?{{ site.time | date: '%m%d%Y' }}"></script>
+    <script src="https://www.cdc.gov/TemplatePackage/4.0/assets/vendor/js/bootstrap.bundle.min.js?{{ site.time | date: '%m%d%Y' }}"></script>
     {% if app.site.isIntranetTarget == true %}
         <script src="{{app.site.paths.web.vendor.js}}typeahead/typeahead.bundle.min.js?{{ site.time | date: '%m%d%Y' }}"></script>
     {% endif %}
-    <script src="/TemplatePackage/contrib/libs/cdc/ab/4.0.0/ab.js"></script>
-    <script src="{{ "/assets/js/app.bundle.min.js" | relative_url }}?{{ site.time | date: '%m%d%Y' }}"></script>
+    <script src="https://www.cdc.gov/TemplatePackage/contrib/libs/cdc/ab/4.0.0/ab.js"></script>
+    <script src="https://www.cdc.gov/TemplatePackage/4.0/assets/js/app.bundle.min.js?{{ site.time | date: '%m%d%Y' }}"></script>
     {% if app.site.isIntranetTarget == false %}
         <!-- Foresee Survey Inclusion -->
         <script src="{{ "/assets/jscript/foresee-trigger.js" | relative_url }}?{{ site.time | date: '%m%d%Y' }}"></script>

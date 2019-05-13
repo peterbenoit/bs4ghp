@@ -53,6 +53,7 @@ app:
           contact: https://wwwn.cdc.gov/dcs/RequestForm.aspx
   site:
     isDevTarget: false
+    isIntranetTarget: false
 
 
 
